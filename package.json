@@ -1,0 +1,20 @@
+{
+  "name": "cuttingmat-doc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serve": "vuepress dev src",
+    "build": "vuepress build src",
+    "postinstall": "patch-package"
+  },
+  "author": "tower1229",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.32.0",
+    "patch-package": "^6.2.2",
+    "sass-loader": "^8.0.2",
+    "vuepress": "^1.8.2",
+    "webpack": "^4.42.0"
+  }
+}
