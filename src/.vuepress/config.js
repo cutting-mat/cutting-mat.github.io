@@ -62,17 +62,17 @@ module.exports = {
             '/guide/',  // cutting mat
             '/guide/getting-started', // 快速上手
             '/guide/framework', // 框架设计
-            '/guide/framework-structure', // 框架结构：目录结构、代码组织、UI
+            '/guide/framework-structure', // 目录结构
           ]
         },
         {
           title: '指南',
           collapsable: false,
           children: [
-            '/guide/ability', // 框架能力
-            '/guide/auth',    // 权限设计
-            '/guide/config',  // 默认配置
-            '/guide/solution',  // 解决方案
+            '/guide/framework-core', // 框架能力
+            '/guide/framework-ui',    // 权限设计
+            '/guide/framework-solution',  // 解决方案
+            '/guide/framework-config',  // 默认配置
           ]
         },
         {

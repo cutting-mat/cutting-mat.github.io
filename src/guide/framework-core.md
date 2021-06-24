@@ -1,4 +1,4 @@
-# 基础能力
+# 核心能力
 
 ## 简单store模式
 
@@ -26,3 +26,7 @@ store.action('someKey', true).then(res => {
 异步数据获取逻辑需要在store.js内部定义，这里就不贴代码了。
 
 其他没了。
+
+:::tip 提示
+注意那些 prop 会在一个组件实例创建**之前**进行验证，所以实例的 property (如 `data`、`computed` 等) 在 `default` 或 `validator` 函数中是不可用的。
+:::
