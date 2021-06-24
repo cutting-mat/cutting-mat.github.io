@@ -2,17 +2,9 @@
 home: true
 heroImage: /logo.png
 heroText: CuttingMat
-tagline: CuttingMat<br> 助你的Vue项目一臂之力
-actionButtons:
-  - text: 开始使用
-    link: /guide/
-    extraClass: vuemastery-trigger primary
-    icon: fa fa-play-circle
-  - text: GitHub
-    link: https://github.com/cutting-mat/template-element-ui
-    extraClass: github grey
-    icon: fa fa-github
-    target: _blank
+tagline: 助你的Vue项目一臂之力
+actionText: 开始使用 →
+actionLink: /guide/
 
 features:
   - title: 稳定可靠
@@ -28,12 +20,6 @@ features:
   - title: 以终为始
     details: 保持开放，保持迭代
 
-footer: |
-  <a href="https://www.iconfont.cn/" target="_blank" rel="noopener">图标库</a>
-  <a href="https://github.com/cutting-mat/template-element-ui/tags" target="_blank" rel="noopener">更新日志</a>
-  <a href="https://github.com/cutting-mat/template-element-ui/issues" target="_blank" rel="noopener">报告BUG</a>
-  <a href="https://github.com/cutting-mat/template-element-ui/discussions" target="_blank" rel="noopener">话题讨论</a>
-  <br>
-  遵循 MIT 开源协议
-  <br>
-  Made By <a href="https://refined-x.com" target="_blank" rel="noopener">refined-x</a>
+footer: 遵循 MIT 开源协议 Made by refined-x
+
+---

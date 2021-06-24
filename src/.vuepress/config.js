@@ -28,9 +28,28 @@ module.exports = {
       }, {
         text: '示例',
         link: '/example/'
+      }, {
+        text: '了解更多',
+        items: [{
+          text: '图标库',
+          link: 'https://www.iconfont.cn/',
+          target:'_blank'
+        }, {
+          text: '更新日志',
+          link: 'https://github.com/cutting-mat/template-element-ui/tags',
+          target:'_blank'
+        }, {
+          text: '报告BUG',
+          link: 'https://github.com/cutting-mat/template-element-ui/issues',
+          target:'_blank'
+        }, {
+          text: '话题讨论',
+          link: 'https://github.com/cutting-mat/template-element-ui/discussions',
+          target:'_blank'
+        }]
       }
     ],
-    repo: 'cutting-mat/cutting-mat.github.io',
+    repo: 'cutting-mat/template-element-ui',
     editLinks: false,
     sidebarDepth: 2,
     sidebar: {

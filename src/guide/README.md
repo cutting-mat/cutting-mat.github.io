@@ -1,66 +1,38 @@
 # CuttingMat
 
-CuttingMat是基于 Vue / Vue-Router / Axios / Element-UI 的大中型项目脚手架
+CuttingMat 是基于 Vue2 的大中型项目脚手架。
 
-### 项目文件结构
+## 特性
 
-```javascript
-CuttingMat
-    |--public/ 
-    |--src/
-    |   |--__template/                  // 空模块模板
-    |   |   |--...
-    |   |
-    |   |--common/                      // 公共资源模块
-    |   |   |--...
-    |   |
-    |   |--main/                        // 主模块
-    |   |   |--...
-    |   |
-    |   |--permission/                  // 权限管理模块
-    |   |   |--...
-    |   |
-    |--api.js                           // axios实例配置
-    |--App.vue                          // 根组件
-    |--main.js                          // 入口文件
-    |--register.js                      // 全局资源注册
-    |--router.js                        // 路由实例（仅包含基础路由）
-    |--store.js                         // 维护一个简单store模式
-```
+- 稳定可靠
 
-## 组件名
+> 都是你最熟悉的技术栈：Vue2.x、Vue-Router、Axios、Element-UI
 
-在注册一个组件的时候，我们始终需要给它一个名字。比如在全局注册的时候我们已经看到了：
+- 面向定制
 
-```js
-const app = Vue.createApp({...})
+> 为定制型前端项目，提供最容易上手的项目模板、最容易扩展的代码组织、最容易使用的工具能力
 
-app.component('my-component-name', {
-  /* ... */
-})
-```
+- 简单灵活
 
-该组件名就是 `app.component` 的第一个参数，在上面的例子中，组件的名称是“my-component-name”。
+> 提供场景支持，而不是提供业务实现，保证开箱即用，而不是~~开箱先删~~
 
-你定义的组件名字可能依赖于你打算拿它来做什么。当直接在 DOM 中使用一个组件 (而不是在字符串模板或[单文件组件](../guide/single-file-component.html)) 的时候，我们强烈推荐遵循 [W3C 规范](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)中的自定义组件名 (字母全小写且必须包含一个连字符)。这会帮助你避免和当前以及未来的 HTML 元素相冲突。
+- 兼收并蓄
 
-1. 全部小写
-2. 包含连字符 (及：即有多个单词与连字符符号连接)
+> 无所不包，又不拘一格，承载开发、协同、联调、部署全开发流程
 
-这样会帮助我们避免与当前以及未来的 HTML 元素发生冲突。
+- 专注高效
 
-你可以在[风格指南](../style-guide/#基础组件名称强烈推荐)中查阅到关于组件名的其它建议。
+> 每一个框架能力、内置组件、内置解决方案都历经真实项目迭代，将为你提供最得力的助攻
 
-### 组件名大小写
+- 以终为始
 
-在字符串模板或单个文件组件中定义组件时，定义组件名的方式有两种：
+> 保持开放，保持迭代
 
-#### 使用 kebab-case
+## 社区
 
-```js
-app.component('my-component-name', {
-  /* ... */
-})
-```
+- [Github Discussions](https://github.com/cutting-mat/template-element-ui/discussions)
+- QQ群：361917044
 
-当使用 kebab-case (短横线分隔命名) 定义一个组件时，你也必须在引用这个自定义元素时使用 kebab-case，例如 `<my-component-name>`。
+## 许可
+
+Naive UI 使用 [MIT license](https://opensource.org/licenses/MIT) 许可证书。
