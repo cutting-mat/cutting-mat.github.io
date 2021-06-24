@@ -1,6 +1,6 @@
 module.exports = {
   title: 'CuttingMat',
-  description: 'CuttingMat - 基于Vue的中台开发框架',
+  description: 'CuttingMat - 助你的Vue项目一臂之力',
   locales: {
     '/': {
       lang: 'zh-CN'
@@ -20,20 +20,14 @@ module.exports = {
     logo: '/logo.png',
     nav: [
       {
+        text: '首页',
+        link: '/'
+      }, {
         text: '文档',
         link: '/guide/'
-      },
-      {
-        text: '生态系统',
-        items: [
-          {
-            text: '社区',
-            link: '/community/'
-          },
-        ]
-      },
+      }
     ],
-    repo: 'tower1229/CuttingMat-Doc',
+    repo: 'cutting-mat/cutting-mat.github.io',
     editLinks: false,
     sidebarDepth: 2,
     sidebar: {

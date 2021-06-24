@@ -220,7 +220,7 @@ footer.main-footer {
   font-size: 0.9rem;
 
   a {
-    color: #fff;
+    margin: 0 6px;
   }
 
   .social-icon {
