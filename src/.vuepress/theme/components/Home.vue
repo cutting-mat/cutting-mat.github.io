@@ -3,14 +3,17 @@
     <header class="hero">
       <div class="inner">
         <div class="left">
-          <img v-if="data.heroImage" :src="$withBase(data.heroImage)" :alt="data.heroAlt || 'hero'" />
+          <img
+            v-if="data.heroImage"
+            :src="$withBase(data.heroImage)"
+            :alt="data.heroAlt || 'hero'"
+          />
         </div>
 
         <div class="right">
-          <h1
-            v-if="data.heroText !== null"
-            id="main-title"
-          >{{ data.heroText || $title || 'Vue.js' }}</h1>
+          <h1 v-if="data.heroText !== null" id="main-title">
+            {{ data.heroText || $title || "Vue.js" }}
+          </h1>
 
           <h2 class="tagline" v-if="tagline" v-html="tagline"></h2>
 
@@ -26,10 +29,16 @@
       </div>
     </header>
 
-
-    <section v-if="data.features && data.features.length" class="section-features">
+    <section
+      v-if="data.features && data.features.length"
+      class="section-features"
+    >
       <div class="inner">
-        <div v-for="(feature, index) in data.features" :key="index" class="feature">
+        <div
+          v-for="(feature, index) in data.features"
+          :key="index"
+          class="feature"
+        >
           <h2>{{ feature.title }}</h2>
           <p v-html="feature.details"></p>
         </div>
@@ -39,46 +48,41 @@
     <Content class="theme-default-content custom" />
 
     <footer class="main-footer">
-      
       <p class="copyright" v-html="data.footer"></p>
     </footer>
   </main>
 </template>
 
 <script>
-import HomeActionLink from '@theme/components/ui/HomeActionLink.vue'
+import HomeActionLink from "@theme/components/ui/HomeActionLink.vue";
 
 export default {
   components: {
     HomeActionLink,
   },
 
-  data: () => ({
-    
-  }),
+  data: () => ({}),
 
   computed: {
     data() {
-      return this.$page.frontmatter
+      return this.$page.frontmatter;
     },
 
     tagline() {
       return (
         this.data.tagline ||
         this.$description ||
-        'The Progressive JavaScript Framework'
-      )
-    }
+        "The Progressive JavaScript Framework"
+      );
+    },
   },
 
-  methods: {
-    
-  }
-}
+  methods: {},
+};
 </script>
 
 <style lang="scss">
-@import '@theme/styles/_settings.scss';
+@import "@theme/styles/_settings.scss";
 
 .home {
   font-family: $fontHome;
@@ -205,7 +209,7 @@ export default {
       width: 100%;
 
       &::before {
-        content: '—';
+        content: "—";
         color: $green;
       }
     }
@@ -213,14 +217,19 @@ export default {
 }
 
 footer.main-footer {
-  background: #475050;
+  background: #208963;
   text-align: center;
-  color: #fff;
+  color: #bfddc7;
   padding: 40px 0;
   font-size: 0.9rem;
 
   a {
     margin: 0 6px;
+
+    color: #fff;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .social-icon {
