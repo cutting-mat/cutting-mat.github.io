@@ -1,4 +1,3 @@
 # cutting-mat.github.io
 
-Base on [vuepress](https://vuepress.vuejs.org/zh/)
-
+Build by [vuepress](https://vuepress.vuejs.org/zh/)

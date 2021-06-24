@@ -1,6 +1,6 @@
-# 组件注册
+# CuttingMat
 
-> 222222该页面假设你已经阅读过了[组件基础](component-basics.md)。如果你还对组件不太了解，推荐你先阅读它。
+CuttingMat是基于 Vue / Vue-Router / Axios / Element-UI 的大中型项目脚手架
 
 ### 项目文件结构
 
