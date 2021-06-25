@@ -71,7 +71,7 @@ module.exports = {
           children: [
             '/guide/framework-core', // 框架能力
             '/guide/framework-ui',    // 权限设计
-            '/guide/framework-solution',  // 解决方案
+            '/guide/framework-solution',  // 业务封装
             '/guide/framework-config',  // 默认配置
           ]
         },

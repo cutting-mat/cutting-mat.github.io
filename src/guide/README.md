@@ -1,6 +1,12 @@
 # CuttingMat
 
-CuttingMat 是基于 Vue2 的大中型项目脚手架。
+CuttingMat 是基于 Vue2 的项目脚手架。
+
+## 定位
+
+与通用UI库或组件库不同，CuttingMat希望在UI层的下层实现一个面向定制化场景的核心类库，在UI层的上层实现一个封装层，最终依托核心能力、通用UI、业务封装三层叠加，加速业务层的开发效率。
+
+并且，CuttingMat还全程整合整个开发流程，对代码管理、质量管理、发布流程都做了默认支持，力求最大化的提升前端项目交付效率。
 
 ## 特性
 
@@ -22,7 +28,7 @@ CuttingMat 是基于 Vue2 的大中型项目脚手架。
 
 - 专注高效
 
-> 每一个框架能力、内置组件、内置解决方案都历经真实项目迭代，将为你提供最得力的助攻
+> 每一个框架能力都历经真实项目迭代，将为你提供最得力的助攻
 
 - 以终为始
 
@@ -35,4 +41,4 @@ CuttingMat 是基于 Vue2 的大中型项目脚手架。
 
 ## 许可
 
-Naive UI 使用 [MIT license](https://opensource.org/licenses/MIT) 许可证书。
+CuttingMat 使用 [MIT license](https://opensource.org/licenses/MIT) 许可证书。

@@ -31,3 +31,11 @@ npm run build
 ## 字体图标
 
 CuttingMat 使用 [iconfont](https://www.iconfont.cn/) 字体图标库。
+
+## UI组件库
+
+CuttingMat 使用 [Element-UI](https://element.eleme.cn/#/zh-CN/component/changelog) 组件库。
+
+::: tip 框架能力
+前往[【指南】](/guide/framework-core)近一步了解**CuttingMat**
+:::
