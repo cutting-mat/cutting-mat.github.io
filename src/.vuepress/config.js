@@ -59,20 +59,21 @@ module.exports = {
           title: '介绍',
           collapsable: false,
           children: [
-            '/guide/',  // cutting mat
-            '/guide/getting-started', // 快速上手
-            '/guide/framework', // 框架设计
+            '/guide/',                    // cutting mat
+            '/guide/getting-started',     // 快速上手
+            '/guide/framework',           // 框架设计
             '/guide/framework-structure', // 目录结构
+            '/guide/framework-code'       // 代码结构
           ]
         },
         {
           title: '指南',
           collapsable: false,
           children: [
-            '/guide/framework-core', // 框架能力
-            '/guide/framework-ui',    // 权限设计
+            '/guide/framework-core',      // 框架能力
+            '/guide/framework-ui',        // 权限设计
             '/guide/framework-solution',  // 业务封装
-            '/guide/framework-config',  // 默认配置
+            '/guide/framework-config',    // 默认配置
           ]
         },
         {
