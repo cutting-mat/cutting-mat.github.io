@@ -10,6 +10,12 @@
 npm init @cutting-mat
 ```
 
+支持三种模板：
+
+- `vue-element-ui`：CuttingMat，用于PC端项目
+- `vue-vant`：用于移动端的项目模板，完善中...
+- `electron`：用于electron项目模板，完善中...
+
 ### git
 
 从 git repository 拉取项目模板。
