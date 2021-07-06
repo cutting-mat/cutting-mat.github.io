@@ -27,7 +27,7 @@ module.exports = {
         link: '/guide/'
       }, {
         text: '示例',
-        link: '/example/'
+        link: 'http://cutting-mat.refined-x.com/template-element-ui/#/library/Element/button'
       }, {
         text: '了解更多',
         items: [{
@@ -85,29 +85,6 @@ module.exports = {
             '/guide/appointment-code',  // 代码管理
             '/guide/appointment-department',  // 部门协作
             
-          ]
-        }
-      ],
-      '/example/': [
-        {
-          title: '示例',
-          collapsable: false,
-          children: [
-            '/example/',
-          ]
-        },
-        {
-          title: 'ElementUI组件',
-          collapsable: false,
-          children: [
-            '/example/element', 
-          ]
-        },
-        {
-          title: '内置组件',
-          collapsable: false,
-          children: [
-            '/example/encapsulation', 
           ]
         }
       ]
