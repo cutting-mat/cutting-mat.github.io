@@ -128,9 +128,134 @@ import {storage} from "@/core";
 - @param url[String] 目标url，缺省则取当前窗口url
 - @return keyName参数的值，如果获取失败返回`null`
 
-## 全局资源管理
+## Vue全局功能管理
 
-## 全局请求配置
+虽然我们提倡组件化、模块化开发，但对于使用频率非常高的功能，把他们全局注册可以明显提高开发效率。在多人协作的项目中，全局功能必须有一个明确、集中的管理方式，否则很容易导致全局功能得不到充分利用，项目内各自造轮子的情况。
+
+全局功能管理器（`@/core/register.js`）是一个专门注册全局功能的Vue插件，将在入口文件（`@/main.js`）中调用。原则上项目中的所有全局功能都应该在这里注册，包括：组件、过滤器、指令等。
+
+全局功能的定义，应遵循**谨慎且必要**原则，通常我们会将通用UI组件、高频功能组件全局注册，避免客户端频繁加载同一个组件。另外由于通用增删改查组件（`CURD`）的实现机制，数据模型的指定控件也必须全局注册。
+
+全局组件命名应遵守**组件命名规范**，做到表意清晰、准确。
+
+全局组件注册可以参考`@/core/register.js`中的三种组件注册方式：
+
+- `BaseHeader`组件是通用头部组件，所以使用同步加载方式，确保界面能第一时间渲染组件；
+- 其后的几个组件使用合并打包方式异步加载，将合并包命名为`"global-components"`，这种方式适用于渲染优先级不像UI组件那么高，但使用率较高的组件，将他们打成一个包可以避免界面由于频繁异步请求组件导致的卡顿感；
+- 其余使用率不是那么高的组件，就使用常规异步加载方式，按需加载，避免不必要的客户端请求。
+
+```js
+/**
+ * @/core/register.js
+ * 
+ * */ 
+
+// 全局组件
+import BaseHeader from '@/main/components/BaseHeader.vue'
+
+const globalComponents = {
+    BaseHeader,
+    BaseBreadcrumb: () => import(/* webpackChunkName: "global-components" */ "@/main/components/BaseBreadcrumb.vue"),
+    BaseSubNav: () => import(/* webpackChunkName: "global-components" */ "@/main/components/BaseSubNav.vue"),
+    BasePagination: () => import(/* webpackChunkName: "global-components" */ "@/main/components/BasePagination.vue"),
+    BaseCURD:  () => import(/* webpackChunkName: "global-components" */ "@/main/components/BaseCURD.vue"),
+    DictRadio:  () => import(/* webpackChunkName: "global-components" */ "@/main/components/DictRadio.vue"),
+    DictCheckbox:  () => import(/* webpackChunkName: "global-components" */ "@/main/components/DictCheckbox.vue"),
+    DictSelect:  () => import(/* webpackChunkName: "global-components" */ "@/main/components/DictSelect.vue"),
+    DictCascader:  () => import(/* webpackChunkName: "global-components" */ "@/main/components/DictCascader.vue"),
+    OrgPicker:  (resolve) => require(["@/system/components/OrgPicker.vue"], resolve),
+    TheResourcePicker:  (resolve) => require(["@/system/components/TheResourcePicker.vue"], resolve),
+    
+}
+
+// 全局过滤器
+import { formatDate } from '@/core'
+
+const globalFilters = {
+    date: formatDate
+}
+
+export default {
+    install: function (Vue) {
+        // 注册过滤器
+        Object.keys(globalFilters).forEach(key => {
+            Vue.filter(key, globalFilters[key])
+        })
+
+        // 注册组件
+        Object.keys(globalComponents).forEach(key => {
+            Vue.component(key, globalComponents[key])
+        })
+
+        ...
+```
+
+## 请求管理
+
+### 统一请求配置
+
+`@/core/api.js`输出通用axios实例，该实例配置了`baseURL`、超时时间、默认`Content-Type`请求头。
+
+其中`baseURL`的配置我们用匹配域名的方式，使一套前端代码可以匹配多套后端环境，构建发布时不需要额外修改前端请求配置。
+
+```js
+import axios from 'axios';
+import * as util from '@/core';
+// 环境配置
+const ENVIRONMENT = {
+    mock: 'http://rap2api.taobao.org/app/mock/223572',
+    dev: 'http://zjsz.kaifa/japi',
+    test: 'http://test.com/api',
+    master: '//master.com/api'
+};
+
+const HASH = {
+    "dev.com": ENVIRONMENT.dev,
+    "test.com": ENVIRONMENT.test,
+    "master.com": ENVIRONMENT.master
+}
+
+export const baseURL = HASH[window.location.host] || ENVIRONMENT.dev;
+// 统一请求实例
+export const instance = axios.create({
+    baseURL,
+    timeout: 10000,
+    headers: {
+        'Content-Type': 'application/json'
+    }
+});
+...
+```
+
+在业务模块的请求定义文件中引入通用axios实例：
+
+```js
+/**
+ * @/main/api/common.js
+ * 
+ * */
+
+import {
+    instance
+} from '@/core/api';
+
+
+//上传图片base64
+export const uploadImg = params => {
+    return instance.post(`/file/upload/base64`, params)
+}
+...
+```
+
+另外，为了兼顾后端的开发习惯，通用实例还对请求参数做了预处理，将get和delete请求中的空字符参数，统一替换为`null`。
+
+### 统一异常处理
+
+异常分为请求状态异常和业务状态异常，请求状态主要根据`HTTP Status Code`确定，状态码规则参考RESTFul；业务状态主要根据`response.data.code`确定，接口规则详见[接口响应规则约定]()。
+
+### Token续期机制
+
+### 数据缓存机制
 
 ## 状态管理
 
