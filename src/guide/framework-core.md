@@ -66,12 +66,13 @@ import {storage} from "@/core";
 - @param source[Object|Array] 要拷贝的对象
 - @return 深拷贝后的对象/数组
 
-### buildTree(array, [parentKey])
+### buildTree(array, [parentKey], [sortFunction])
 
 一维对象数组转树形结构
 
 - @param array[对象数组] 对象数组中的对象必须包含id和[parentKey]键，如{id: 1, pid: 0}。pid值为假或等于自身id，则判定为一级节点
 - @param parentKey[String] 指向上级id的key，默认"pid"
+- @param sortFunction[Function] 用于arrayObject.sort(sortFunction)的排序方法，默认不排序
 - @return 由children键建立层级的对象数组
 
 ### formatDate(value, [fmt])
