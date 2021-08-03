@@ -129,17 +129,25 @@ import {storage} from "@/core";
 - @param url[String] 目标url，缺省则取当前窗口url
 - @return keyName参数的值，如果获取失败返回`null`
 
-## Vue全局功能管理
+## 全局功能注册
 
 虽然我们提倡组件化、模块化开发，但对于使用频率非常高的功能，把他们全局注册可以明显提高开发效率。在多人协作的项目中，全局功能必须有一个明确、集中的管理方式，否则很容易导致全局功能得不到充分利用，项目内各自造轮子的情况。
 
-全局功能管理器（`@/core/register.js`）是一个专门注册全局功能的Vue插件，将在入口文件（`@/main.js`）中调用。原则上项目中的所有全局功能都应该在这里注册，包括：组件、过滤器、指令等。
+### 全局功能注册器
 
-全局功能的定义，应遵循**谨慎且必要**原则，通常我们会将通用UI组件、高频功能组件全局注册，避免客户端频繁加载同一个组件。另外由于通用增删改查组件（`CURD`）的实现机制，数据模型的指定控件也必须全局注册。
+全局功能注册器（`@/core/register.js`）是一个专门注册全局功能的Vue插件，将在入口文件（`@/main.js`）中调用。原则上项目中的所有全局功能都应该在这里注册，包括：方法、组件、过滤器、指令等。
+
+决定注册一个全局功能，应遵循**谨慎且必要**原则，通常我们会将通用UI组件、高频功能组件全局注册，避免客户端频繁加载同一个组件。
+
+::: tip
+由于通用增删改查组件（`@/main/components/BaseCURD.vue`）的实现机制，数据模型中指定的展示控件也必须全局注册。
+:::
+
+### 全局组件注册
 
 全局组件命名应遵守**组件命名规范**，做到表意清晰、准确。
 
-全局组件注册可以参考`@/core/register.js`中的三种组件注册方式：
+全局组件有三种组件注册方式：同步加载、合并打包异步加载、常规异步加载。
 
 - `BaseHeader`组件是通用头部组件，所以使用同步加载方式，确保界面能第一时间渲染组件；
 - 其后的几个组件使用合并打包方式异步加载，将合并包命名为`"global-components"`，这种方式适用于渲染优先级不像UI组件那么高，但使用率较高的组件，将他们打成一个包可以避免界面由于频繁异步请求组件导致的卡顿感；
@@ -169,20 +177,8 @@ const globalComponents = {
     
 }
 
-// 全局过滤器
-import { formatDate } from '@/core'
-
-const globalFilters = {
-    date: formatDate
-}
-
 export default {
     install: function (Vue) {
-        // 注册过滤器
-        Object.keys(globalFilters).forEach(key => {
-            Vue.filter(key, globalFilters[key])
-        })
-
         // 注册组件
         Object.keys(globalComponents).forEach(key => {
             Vue.component(key, globalComponents[key])
