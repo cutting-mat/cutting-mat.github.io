@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.png
 heroText: CuttingMat
-tagline: 助你的Vue项目一臂之力
+tagline: 为大中型前端项目/团队提供灵活、可靠、统一、规范的研发解决方案
 actionText: 开始使用 →
 actionLink: /guide/getting-started/
 

@@ -1,6 +1,6 @@
 module.exports = {
   title: 'CuttingMat',
-  description: 'CuttingMat - 助你的Vue项目一臂之力',
+  description: 'CuttingMat - 为大中型前端项目/团队提供灵活、可靠、统一、规范的研发解决方案，助你的Vue项目一臂之力',
   locales: {
     '/': {
       lang: 'zh-CN'
