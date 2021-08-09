@@ -1,6 +1,6 @@
 # 核心能力
 
-## 预置CSS
+## 内置全局样式
 
 全局样式文件（`@/core/global.css`）默认被根组件（`@/core/App.vue`）引用，作用于项目全局。
 
@@ -39,7 +39,7 @@
 
 [参考源码](https://github.com/cutting-mat/template-element-ui/blob/master/src/core/global.css#L198)
 
-## 工具类库
+## 内置工具库
 
 工具类库（`@/core/index.js`）是预置的实用工具，命名为index是为了便于引用：
 
@@ -129,7 +129,7 @@ import {storage} from "@/core";
 - @param url[String] 目标url，缺省则取当前窗口url
 - @return keyName参数的值，如果获取失败返回`null`
 
-## 全局功能注册
+## 全局功能管理
 
 虽然我们提倡组件化、模块化开发，但对于使用频率非常高的功能，把他们全局注册可以明显提高开发效率。在多人协作的项目中，全局功能必须有一个明确、集中的管理方式，否则很容易导致全局功能得不到充分利用，项目内各自造轮子的情况。
 
@@ -187,7 +187,7 @@ export default {
         ...
 ```
 
-## 请求管理
+## 网络请求
 
 ### 统一请求配置
 
@@ -254,7 +254,9 @@ export const uploadImg = params => {
 
 ### 数据缓存机制
 
-## 状态管理
+## 模块间通信
+
+### Store
 
 大多数项目其实不需要vuex，根目录下`store.js`维护了一个[简单store模式](https://cn.vuejs.org/v2/guide/state-management.html#%E7%AE%80%E5%8D%95%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E8%B5%B7%E6%AD%A5%E4%BD%BF%E7%94%A8)，支持同步、异步数据存取，用于共享或缓存数据，`common/components/nav.vue`和`common/components/header.vue`里都有用例。
 
@@ -284,5 +286,9 @@ store.action('someKey', true).then(res => {
 :::tip 提示
 注意那些 prop 会在一个组件实例创建**之前**进行验证，所以实例的 property (如 `data`、`computed` 等) 在 `default` 或 `validator` 函数中是不可用的。
 :::
+
+### Event
+
+全局事件机制
 
 ## 权限控制
