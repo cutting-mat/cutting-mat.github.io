@@ -27,7 +27,7 @@ module.exports = {
         link: '/guide/'
       }, {
         text: '示例',
-        link: 'http://cutting-mat.refined-x.com/template-element-ui/?token=test123'
+        link: 'http://cutting-mat.refined-x.com/template-element-ui/#/library'
       }, {
         text: '了解更多',
         items: [{
