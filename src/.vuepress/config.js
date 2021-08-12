@@ -26,8 +26,8 @@ module.exports = {
         text: '文档（更新中）',
         link: '/guide/'
       }, {
-        text: '示例（内网）',
-        link: 'http://cutting-mat.refined-x.com/template-element-ui/#/library/Element/button'
+        text: '示例',
+        link: 'http://cutting-mat.refined-x.com/template-element-ui/?token=test123'
       }, {
         text: '了解更多',
         items: [{
