@@ -23,10 +23,10 @@ module.exports = {
         text: '首页',
         link: '/'
       }, {
-        text: '文档',
+        text: '文档（更新中）',
         link: '/guide/'
       }, {
-        text: '示例',
+        text: '示例（内网）',
         link: 'http://cutting-mat.refined-x.com/template-element-ui/#/library/Element/button'
       }, {
         text: '了解更多',
