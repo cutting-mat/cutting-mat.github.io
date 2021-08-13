@@ -105,7 +105,13 @@ module.exports = {
           `<div class="custom-block info"><p class="custom-block-title">${info}</p>`,
         after: '</div>'
       }
-    ]
+    ],
+    ['sitemap', {
+      hostname: "https://cutting-mat.refined-x.com",
+      // 排除无实际内容的页面
+      exclude: ["/404.html"]
+    }
+]
   ],
   markdown: {
     lineNumbers: true,

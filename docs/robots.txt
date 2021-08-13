@@ -1,0 +1,3 @@
+Sitemap: https://cutting-mat.refined-x.com/sitemap.xml
+
+User-agent: *
