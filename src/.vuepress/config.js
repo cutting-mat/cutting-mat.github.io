@@ -55,7 +55,7 @@ module.exports = {
         }]
       }
     ],
-    repo: 'cutting-mat/template-element-ui',
+    repo: 'cutting-mat',
     editLinks: false,
     sidebarDepth: 2,
     sidebar: {
