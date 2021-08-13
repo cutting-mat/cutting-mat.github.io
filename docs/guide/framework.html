@@ -3,17 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>框架设计 | CuttingMat</title>
+    <title>框架设计 | CuttingMat:一个Vue项目开发框架</title>
     <meta name="generator" content="VuePress 1.8.2">
     <link rel="icon" href="/logo.png">
-    <meta name="description" content="CuttingMat - 为大中型前端项目/团队提供灵活、可靠、统一、规范的研发解决方案，助你的Vue项目一臂之力">
+    <script src="/assets/js/baidu.js"></script>
+    <meta name="description" content="面向大中型项目的Vue开发框架，助你的前端项目一臂之力">
+    <meta name="keywords" content="CuttingMat,Vue框架,Vue模板,前端模板">
     <meta name="msapplication-TileColor" content="#000000">
     
-    <link rel="preload" href="/assets/css/0.styles.864b741c.css" as="style"><link rel="preload" href="/assets/js/app.d86c290a.js" as="script"><link rel="preload" href="/assets/js/2.b2a62ceb.js" as="script"><link rel="preload" href="/assets/js/7.2e2f1496.js" as="script"><link rel="prefetch" href="/assets/js/10.52cfa0be.js"><link rel="prefetch" href="/assets/js/11.dcad1b4f.js"><link rel="prefetch" href="/assets/js/12.2313dda4.js"><link rel="prefetch" href="/assets/js/13.880ca7e3.js"><link rel="prefetch" href="/assets/js/14.685527fd.js"><link rel="prefetch" href="/assets/js/15.5c870cc7.js"><link rel="prefetch" href="/assets/js/16.ce95abd3.js"><link rel="prefetch" href="/assets/js/17.0dde8e27.js"><link rel="prefetch" href="/assets/js/18.22133139.js"><link rel="prefetch" href="/assets/js/19.5ec58e12.js"><link rel="prefetch" href="/assets/js/20.42338d63.js"><link rel="prefetch" href="/assets/js/21.0309aa9d.js"><link rel="prefetch" href="/assets/js/22.b782cc3b.js"><link rel="prefetch" href="/assets/js/3.2b3a453c.js"><link rel="prefetch" href="/assets/js/4.9e378f02.js"><link rel="prefetch" href="/assets/js/5.c23d5646.js"><link rel="prefetch" href="/assets/js/6.372e430a.js"><link rel="prefetch" href="/assets/js/8.cd176cd4.js"><link rel="prefetch" href="/assets/js/9.1b35a698.js">
-    <link rel="stylesheet" href="/assets/css/0.styles.864b741c.css">
+    <link rel="preload" href="/assets/css/0.styles.2b6b7d11.css" as="style"><link rel="preload" href="/assets/js/app.1bb41de6.js" as="script"><link rel="preload" href="/assets/js/2.b2a62ceb.js" as="script"><link rel="preload" href="/assets/js/7.2e2f1496.js" as="script"><link rel="prefetch" href="/assets/js/10.68830937.js"><link rel="prefetch" href="/assets/js/11.5667ddd7.js"><link rel="prefetch" href="/assets/js/12.46e76625.js"><link rel="prefetch" href="/assets/js/13.b2ac3ec2.js"><link rel="prefetch" href="/assets/js/14.29c7c616.js"><link rel="prefetch" href="/assets/js/15.c8ad9a3b.js"><link rel="prefetch" href="/assets/js/16.f24ec13b.js"><link rel="prefetch" href="/assets/js/17.dc566838.js"><link rel="prefetch" href="/assets/js/18.d06a2d17.js"><link rel="prefetch" href="/assets/js/19.ace6da3b.js"><link rel="prefetch" href="/assets/js/20.9b2e351f.js"><link rel="prefetch" href="/assets/js/21.81ef9fb9.js"><link rel="prefetch" href="/assets/js/22.c673aa32.js"><link rel="prefetch" href="/assets/js/3.08d8b46f.js"><link rel="prefetch" href="/assets/js/4.b1ca2a1d.js"><link rel="prefetch" href="/assets/js/5.ebddc1b7.js"><link rel="prefetch" href="/assets/js/6.bc61acac.js"><link rel="prefetch" href="/assets/js/8.cd176cd4.js"><link rel="prefetch" href="/assets/js/9.1b35a698.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2b6b7d11.css">
   </head>
   <body>
-    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="CuttingMat" class="logo"> <span class="site-name can-hide">CuttingMat</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/logo.png" alt="CuttingMat:一个Vue项目开发框架" class="logo"> <span class="site-name can-hide">CuttingMat:一个Vue项目开发框架</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
   首页
 </a></div><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
   文档（更新中）
@@ -54,6 +56,6 @@
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/assets/js/app.d86c290a.js" defer></script><script src="/assets/js/2.b2a62ceb.js" defer></script><script src="/assets/js/7.2e2f1496.js" defer></script>
+    <script src="/assets/js/app.1bb41de6.js" defer></script><script src="/assets/js/2.b2a62ceb.js" defer></script><script src="/assets/js/7.2e2f1496.js" defer></script>
   </body>
 </html>

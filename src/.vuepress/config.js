@@ -1,12 +1,14 @@
 module.exports = {
-  title: 'CuttingMat',
-  description: 'CuttingMat - 为大中型前端项目/团队提供灵活、可靠、统一、规范的研发解决方案，助你的Vue项目一臂之力',
+  title: 'CuttingMat:一个Vue项目开发框架',
+  description: '面向大中型项目的Vue开发框架，助你的前端项目一臂之力',
   locales: {
     '/': {
       lang: 'zh-CN'
     }
   },
   head: [
+    ['meta', { name: 'keywords', content: 'CuttingMat,Vue框架,Vue模板,前端模板' }],
+    ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
     [
       'link',
       {
@@ -14,7 +16,11 @@ module.exports = {
         href: '/logo.png'
       }
     ],
-    ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
+    ["script",
+      {
+        src: "/assets/js/baidu.js"
+      }
+    ]
   ],
   themeConfig: {
     logo: '/logo.png',
@@ -33,19 +39,19 @@ module.exports = {
         items: [{
           text: '图标库',
           link: 'https://www.iconfont.cn/',
-          target:'_blank'
+          target: '_blank'
         }, {
           text: '更新日志',
           link: 'https://github.com/cutting-mat/template-element-ui/tags',
-          target:'_blank'
+          target: '_blank'
         }, {
           text: '报告BUG',
           link: 'https://github.com/cutting-mat/template-element-ui/issues',
-          target:'_blank'
+          target: '_blank'
         }, {
           text: '话题讨论',
           link: 'https://github.com/cutting-mat/template-element-ui/discussions',
-          target:'_blank'
+          target: '_blank'
         }]
       }
     ],
@@ -84,7 +90,7 @@ module.exports = {
             '/guide/appointment-thinking',  // 封装思路
             '/guide/appointment-code',  // 代码管理
             '/guide/appointment-department',  // 部门协作
-            
+
           ]
         }
       ]
