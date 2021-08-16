@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'CuttingMat:一个Vue项目开发框架',
+  title: 'CuttingMat: Vue项目开发框架',
   description: '面向大中型项目的Vue开发框架，助你的前端项目一臂之力',
   locales: {
     '/': {
