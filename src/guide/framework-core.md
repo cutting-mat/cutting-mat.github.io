@@ -41,19 +41,23 @@
 
 ## 内置工具库
 
-工具类库（`@/core/index.js`）是预置的实用工具，命名为index是为了便于引用：
+工具类库（`@/core/util.js`）是预置的实用工具，在`@/core/index.js`中默认导出，便于引用。
 
 ``` js
+/**
+ * 引用内置工具
+ * */ 
+
 // 全部引入
 import * as util from "@/core";
 
-// 或者按需引入
+// 按需引入
 import {storage} from "@/core";
 ```
 
 ### storage(key, [value])
 
-本地存储，基于`window.localStorage`实现，支持JSON格式自动转换
+本地存储，基于`window.localStorage`实现，支持JSON格式存取前自动转换
 
 - @param key[String] 要存/取的键；自动将`process.env.BASE_URL`做为命名空间，也可以在`vue.config.js`里设置`process.env.VUE_APP_STORAGE_SPACE`更改命名空间。
 - @param value[any] 要存的值，若缺省则返回key的值
