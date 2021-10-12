@@ -1,6 +1,6 @@
 module.exports = {
   title: 'CuttingMat: Vue开发框架',
-  description: '面向大中型项目的Vue开发框架，助你的前端项目一臂之力',
+  description: '低成本提高前端项目质量底线，助你的Vue项目一臂之力',
   locales: {
     '/': {
       lang: 'zh-CN'
@@ -67,7 +67,6 @@ module.exports = {
           children: [
             '/guide/',                    // cutting mat
             '/guide/getting-started',     // 快速上手
-            '/guide/framework',           // 框架设计
             '/guide/framework-structure', // 目录结构
             '/guide/framework-code'       // 代码结构
           ]

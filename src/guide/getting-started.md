@@ -29,9 +29,9 @@ git clone https://github.com/cutting-mat/template-element-ui.git
 安装npm依赖，并运行开发服务。
 
 ``` bash
-npm i
-npm run serve
-npm run build
+npm i               // 安装依赖
+npm run serve       // 启动开发服务
+npm run build       // 构建生产环境代码
 ```
 
 ## 字体图标
@@ -50,6 +50,6 @@ Element-UI自定义主题文件目录：`@/core/element-theme/`
 
 全局开发配置和构建配置都在`/vue.config.js`中。
 
-::: tip 框架能力
-前往[【指南】](/guide/framework-core)近一步了解**CuttingMat**
+::: tip 框架设计
+前往[【指南】](/guide/)近一步了解**CuttingMat**
 :::
