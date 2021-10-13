@@ -30,7 +30,7 @@ module.exports = {
         link: '/'
       }, {
         text: '文档（更新中）',
-        link: '/guide/'
+        link: '/doc/intro-about/'
       }, {
         text: '示例',
         link: 'http://cutting-mat.refined-x.com/template-element-ui/#/library'
@@ -60,35 +60,35 @@ module.exports = {
     sidebarDepth: 2,
     sidebar: {
       collapsable: false,
-      '/guide/': [
+      '/doc/': [
         {
           title: '介绍',
           collapsable: false,
           children: [
-            '/guide/',                    // cutting mat
-            '/guide/getting-started',     // 快速上手
-            '/guide/framework-structure', // 目录结构
-            '/guide/framework-code'       // 代码结构
+            '/doc/intro-about',                    // cutting mat
+            '/doc/intro-getting-started',     // 快速上手
+            '/doc/intro-structure',          // 目录结构
+            '/doc/intro-code-structure'       // 代码结构
           ]
         },
         {
           title: '指南',
           collapsable: false,
           children: [
-            '/guide/framework-core',      // 框架能力
-            '/guide/framework-ui',        // 权限设计
-            '/guide/framework-solution',  // 业务封装
-            '/guide/framework-config',    // 默认配置
+            '/doc/guide-core',           // 框架能力
+            '/doc/guide-ui',             // 权限设计
+            '/doc/guide-solution',       // 业务封装
+            '/doc/guide-config',         // 默认配置
           ]
         },
         {
           title: '约定',
           collapsable: false,
           children: [
-            '/guide/appointment-dev',  // 开发约定
-            '/guide/appointment-thinking',  // 封装思路
-            '/guide/appointment-code',  // 代码管理
-            '/guide/appointment-department',  // 部门协作
+            '/doc/appointment-dev',          // 开发约定
+            '/doc/appointment-thinking',     // 封装思路
+            '/doc/appointment-code',         // 代码管理
+            '/doc/appointment-department',   // 部门协作
 
           ]
         }

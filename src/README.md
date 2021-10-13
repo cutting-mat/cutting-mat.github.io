@@ -4,7 +4,7 @@ heroImage: /logo.png
 heroText: CuttingMat
 tagline: 低成本，高底线，助你的Vue项目一臂之力
 actionText: 开始使用 →
-actionLink: /guide/getting-started/
+actionLink: /doc/intro-getting-started/
 
 features:
   - title: 简单可靠
