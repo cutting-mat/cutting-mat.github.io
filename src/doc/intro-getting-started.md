@@ -49,7 +49,3 @@ Element-UI自定义主题文件目录：`@/core/element-theme/`
 ## 框架配置
 
 全局开发配置和构建配置都在`/vue.config.js`中。
-
-::: tip 框架设计
-前往[【指南】](/guide/)近一步了解**CuttingMat**
-:::
