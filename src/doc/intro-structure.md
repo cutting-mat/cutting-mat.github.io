@@ -145,10 +145,10 @@ cutting-mat-project/
             |--widget-support/                  // 组件库依赖文件
             |--App.vue                          // 项目根组件
             |--global.css                       // 全局样式（App.vue依赖）
-            |--http.js                          // 全局请求配置
             |--index.js                         // 核心功能（默认输出util.js）
             |--main.js                          // 构建入口文件
-            |--register.js                      // 全局资源注册器
+            |--register.js                      // Vue全局功能注册
+            |--request.js                       // 全局请求配置
             |--router.js                        // 全局路由守卫
             |--store.js                         // 内置状态管理模块
             `--util.js                          // 内置工具类

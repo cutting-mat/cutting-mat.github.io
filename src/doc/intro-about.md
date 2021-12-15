@@ -40,7 +40,7 @@ CuttingMat重点面向定制项目，所以框架只内置少量业务无关的�
 
 综上，框架整体的设计思路如下：
 
-![架构图](./img/CuttingMat.png)
+![架构图](/assets/img/CuttingMat.png)
 （右键在新标签中打开，查看高清大图）
 
 ::: tip 目录结构

@@ -17,11 +17,11 @@
 
 项目整体的代码组织关系如下图：
 
-![代码组织](./img/code-org.png)
+![代码组织](/assets/img/code-org.png)
 
 对应的路由关系如下图：
 
-![路由关系](./img/router.png)
+![路由关系](/assets/img/router.png)
 
 ## 公共代码
 
@@ -42,7 +42,3 @@
 - 全局样式：`@/core/global.css`是全局样式，被根组件引用，作用于项目全局。
 - 模块样式：`@/[Moudle Folder]/assets/style.css`是模块级样式，被模块根组件引用，作用于当前模块。
 - 组件样式：每个vue组件/页面的局部样式，仅作用于当前vue文件。
-
-::: tip 框架能力
-前往[【指南】](/guide/framework-core)近一步了解**CuttingMat**
-:::
