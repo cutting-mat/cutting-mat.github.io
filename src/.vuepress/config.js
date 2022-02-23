@@ -1,13 +1,13 @@
 module.exports = {
-  title: 'cutting-mat: Vue开发框架',
-  description: '低成本提高前端项目质量底线，助你的Vue项目一臂之力',
+  title: 'cutting-mat: Vue项目脚手架',
+  description: '面向大中型项目的开发脚手架，助你的Vue项目一臂之力',
   locales: {
     '/': {
       lang: 'zh-CN'
     }
   },
   head: [
-    ['meta', { name: 'keywords', content: 'CuttingMat,Vue框架,Vue模板,前端模板' }],
+    ['meta', { name: 'keywords', content: 'CuttingMat,Vue框架,Vue模板,前端模板,Vue项目模板' }],
     ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
     [
       'link',
@@ -67,8 +67,8 @@ module.exports = {
           children: [
             '/doc/intro-about',                    // cutting mat
             '/doc/intro-getting-started',     // 快速上手
-            '/doc/intro-structure',          // 目录结构
-            '/doc/intro-code-structure'       // 代码结构
+            '/doc/intro-catalogue',          // 目录结构
+            '/doc/intro-routes'       // 路由结构
           ]
         },
         {
