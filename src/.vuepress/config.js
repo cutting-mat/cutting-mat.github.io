@@ -29,32 +29,56 @@ module.exports = {
         text: '首页',
         link: '/'
       }, {
-        text: '文档（更新中）',
+        text: '文档',
         link: '/doc/intro-about/'
+      }, {
+        text: '功能',
+        link: '/function/core/'
       }, {
         text: '示例',
         link: 'http://cutting-mat.refined-x.com/template-element-ui/#/library'
       }, {
-        text: '了解更多',
+        text: '生态系统',
         items: [{
-          text: '图标库',
-          link: 'https://www.iconfont.cn/',
-          target: '_blank'
+          text: '核心插件',
+          items: [{
+            text: '@cutting-mat/axios',
+            link: 'http://cutting-mat.refined-x.com/axios/',
+            target: '_blank'
+          }, {
+            text: '@cutting-mat/vue-store',
+            link: 'http://cutting-mat.refined-x.com/vue-store/',
+            target: '_blank'
+          }, {
+            text: '@cutting-mat/el-upload',
+            link: 'http://cutting-mat.refined-x.com/el-upload/',
+            target: '_blank'
+          }, {
+            text: '@cutting-mat/animater',
+            link: 'http://cutting-mat.refined-x.com/animater/',
+            target: '_blank'
+          }]
         }, {
-          text: '更新日志',
-          link: 'https://github.com/cutting-mat/template-element-ui/tags',
-          target: '_blank'
-        }, {
-          text: '报告BUG',
-          link: 'https://github.com/cutting-mat/template-element-ui/issues',
-          target: '_blank'
-        }, {
-          text: '话题讨论',
-          link: 'https://github.com/cutting-mat/template-element-ui/discussions',
-          target: '_blank'
-        }]
-      }
-    ],
+          text: '帮助',
+          items: [{
+            text: '社区',
+            link: '/ecosystem/about/'
+          }, {
+            text: '更新日志',
+            link: 'https://github.com/cutting-mat/template-element-ui/tags',
+            target: '_blank'
+          }, {
+            text: '报告BUG',
+            link: 'https://github.com/cutting-mat/template-element-ui/issues',
+            target: '_blank'
+          }, {
+            text: '话题讨论',
+            link: 'https://github.com/cutting-mat/template-element-ui/discussions',
+            target: '_blank'
+          }]
+        }
+        ]
+      }],
     repo: 'cutting-mat',
     editLinks: false,
     sidebarDepth: 2,
@@ -65,20 +89,17 @@ module.exports = {
           title: '介绍',
           collapsable: false,
           children: [
-            '/doc/intro-about',                    // cutting mat
+            '/doc/intro-about',               // cutting mat
             '/doc/intro-getting-started',     // 快速上手
-            '/doc/intro-catalogue',          // 目录结构
-            '/doc/intro-routes'       // 路由结构
+            '/doc/intro-catalogue',           // 目录结构
+            '/doc/intro-routes'               // 路由结构
           ]
         },
         {
           title: '指南',
           collapsable: false,
           children: [
-            '/doc/guide-core',           // 框架能力
-            '/doc/guide-ui',             // 权限设计
-            '/doc/guide-solution',       // 业务封装
-            '/doc/guide-config',         // 默认配置
+            '/doc/guide-config',               // cutting mat
           ]
         },
         {
@@ -92,6 +113,17 @@ module.exports = {
 
           ]
         }
+      ],
+      '/function/': [
+        {
+          title: '功能',
+          collapsable: false,
+          children: [
+            '/function/core',          // 核心能力
+            '/doc/component',     // 内置组件
+            '/doc/solution',      // 业务封装
+          ]
+        },
       ]
     },
   },
@@ -110,7 +142,7 @@ module.exports = {
       // 排除无实际内容的页面
       exclude: ["/404.html"]
     }
-]
+    ]
   ],
   markdown: {
     lineNumbers: true,
