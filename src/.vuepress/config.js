@@ -30,7 +30,7 @@ module.exports = {
         link: '/'
       }, {
         text: '文档',
-        link: '/doc/intro-about/'
+        link: '/doc/intro/'
       }, {
         text: '功能',
         link: '/function/core/'
@@ -89,8 +89,8 @@ module.exports = {
           title: '介绍',
           collapsable: false,
           children: [
-            '/doc/intro-about',               // cutting mat
-            '/doc/intro-getting-started',     // 快速上手
+            '/doc/intro',               // cutting mat
+            '/doc/getting-started',     // 快速开始
             '/doc/intro-catalogue',           // 目录结构
             '/doc/intro-routes'               // 路由结构
           ]
@@ -116,12 +116,43 @@ module.exports = {
       ],
       '/function/': [
         {
-          title: '功能',
+          title: '核心能力',
           collapsable: false,
           children: [
             '/function/core',          // 核心能力
-            '/doc/component',     // 内置组件
-            '/doc/solution',      // 业务封装
+            '/function/component',     // 内置组件
+            '/function/solution',      // 业务封装
+            '/function/config',         // 配置
+          ]
+        },
+        {
+          title: '内置组件',
+          collapsable: false,
+          children: [
+            '/function/core',          // 核心能力
+            '/function/component',     // 内置组件
+            '/function/solution',      // 业务封装
+            '/function/config',         // 配置
+          ]
+        },
+        {
+          title: '业务封装',
+          collapsable: false,
+          children: [
+            '/function/core',          // 核心能力
+            '/function/component',     // 内置组件
+            '/function/solution',      // 业务封装
+            '/function/config',         // 配置
+          ]
+        },
+        {
+          title: '配置参考',
+          collapsable: false,
+          children: [
+            '/function/core',          // 核心能力
+            '/function/component',     // 内置组件
+            '/function/solution',      // 业务封装
+            '/function/config',         // 配置
           ]
         },
       ]
