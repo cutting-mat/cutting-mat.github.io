@@ -18,9 +18,9 @@
 
 CuttingMat 从以下几个方面着手，力求通过架构设计提高前端项目的工程质量：
 
-- **目录结构设计**：按业务模块组织文件，各模块独立管理自己的所有文件，再也不用从漫山遍野的目录中找文件了（[目录结构设计](./intro-catalogue)）
+- **目录结构设计**：按业务模块组织文件，各模块独立管理自己的所有文件，再也不用从漫山遍野的目录中找文件了（[目录结构设计](/guide/intro-catalogue)）
 
-- **路由结构设计**：各模块的路由自由组合成主路由，还可以配置不设防的旁路路由（[路由结构设计](./intro-routes)）
+- **路由结构设计**：各模块的路由自由组合成主路由，还可以配置不设防的旁路路由（[路由结构设计](/guide/intro-routes)）
 
 - **核心能力封装**：权限、请求、状态……，开发者只需要关注业务代码
 
@@ -34,8 +34,8 @@ CuttingMat 从以下几个方面着手，力求通过架构设计提高前端项
 - [x] 支持同域子项目间共享登录凭据
 - [x] 主路由多套模板（Layout）自由切换
 - [x] 天然支持旁路（白名单）的路由结构
-- [x] 支持路由、视图、请求任意颗粒度的权限控制（Power By [vue-access-control](https://github.com/tower1229/Vue-Access-Control/blob/master/README_CN.md)）
-- [x] 账号鉴权模块，整合登录凭据自动续期功能
+- [x] 权限控制，基于角色实现路由、视图、请求任意颗粒度的权限控制（Power By [vue-access-control](https://github.com/tower1229/Vue-Access-Control/blob/master/README_CN.md)）
+- [x] 用户鉴权，整合Token续期方案
 - [x] 完整的异步请求管理方案
 - [x] 超薄丝滑的请求缓存设计（Power By [@cutting-mat/axios](https://github.com/cutting-mat/axios/blob/main/README_CN.md)）
 - [x] 更简单的状态管理（Power By [@cutting-mat/vue-store](https://github.com/cutting-mat/vue-store/blob/main/README_CN.md)）

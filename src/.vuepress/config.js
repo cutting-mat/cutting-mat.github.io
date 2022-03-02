@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'cutting-mat: Vue项目脚手架',
+  title: 'CuttingMat',
   description: '面向大中型项目的开发脚手架，助你的Vue项目一臂之力',
   locales: {
     '/': {
@@ -29,90 +29,62 @@ module.exports = {
         text: '首页',
         link: '/'
       }, {
-        text: '文档',
-        link: '/doc/intro/'
+        text: '指南',
+        link: '/guide/about'
       }, {
         text: '功能',
         link: '/function/core/'
       }, {
-        text: '示例',
+        text: '演示',
         link: 'http://cutting-mat.refined-x.com/template-element-ui/#/library'
       }, {
-        text: '生态系统',
+        text: '插件',
         items: [{
-          text: '核心插件',
-          items: [{
-            text: '@cutting-mat/axios',
-            link: 'http://cutting-mat.refined-x.com/axios/',
-            target: '_blank'
-          }, {
-            text: '@cutting-mat/vue-store',
-            link: 'http://cutting-mat.refined-x.com/vue-store/',
-            target: '_blank'
-          }, {
-            text: '@cutting-mat/el-upload',
-            link: 'http://cutting-mat.refined-x.com/el-upload/',
-            target: '_blank'
-          }, {
-            text: '@cutting-mat/animater',
-            link: 'http://cutting-mat.refined-x.com/animater/',
-            target: '_blank'
-          }]
+          text: '@cutting-mat/axios',
+          link: 'http://cutting-mat.refined-x.com/axios/',
+          target: '_blank'
         }, {
-          text: '帮助',
-          items: [{
-            text: '社区',
-            link: '/ecosystem/about/'
-          }, {
-            text: '更新日志',
-            link: 'https://github.com/cutting-mat/template-element-ui/tags',
-            target: '_blank'
-          }, {
-            text: '报告BUG',
-            link: 'https://github.com/cutting-mat/template-element-ui/issues',
-            target: '_blank'
-          }, {
-            text: '话题讨论',
-            link: 'https://github.com/cutting-mat/template-element-ui/discussions',
-            target: '_blank'
-          }]
-        }
-        ]
+          text: '@cutting-mat/vue-store',
+          link: 'http://cutting-mat.refined-x.com/vue-store/',
+          target: '_blank'
+        }, {
+          text: '@cutting-mat/el-upload',
+          link: 'http://cutting-mat.refined-x.com/el-upload/',
+          target: '_blank'
+        }, {
+          text: '@cutting-mat/animater',
+          link: 'http://cutting-mat.refined-x.com/animater/',
+          target: '_blank'
+        }]
       }],
     repo: 'cutting-mat',
     editLinks: false,
     sidebarDepth: 2,
     sidebar: {
       collapsable: false,
-      '/doc/': [
+      '/guide/': [
         {
           title: '介绍',
           collapsable: false,
           children: [
-            '/doc/intro',               // cutting mat
-            '/doc/getting-started',     // 快速开始
-            '/doc/intro-catalogue',           // 目录结构
-            '/doc/intro-routes'               // 路由结构
+            '/guide/about',                   // 介绍
+            '/guide/getting-started',         // 快速开始
+            '/guide/community',              // 社区
           ]
         },
         {
           title: '指南',
           collapsable: false,
           children: [
-            '/doc/guide-config',               // cutting mat
-          ]
-        },
-        {
-          title: '约定',
-          collapsable: false,
-          children: [
-            '/doc/appointment-dev',          // 开发约定
-            '/doc/appointment-thinking',     // 封装思路
-            '/doc/appointment-code',         // 代码管理
-            '/doc/appointment-department',   // 部门协作
+            '/guide/intro-catalogue',         // 目录结构
+            '/guide/intro-routes',            // 路由结构
+            '/guide/intro-code',               // 代码组织
+            '/guide/guide-config',             // vue-cli 配置、babel 兼容性配置、eslint 代码检查配置、vue 全局功能配置、多环境配置
+            '/guide/appointment-dev',          // 开发约定
+            '/guide/appointment-department',   // 部门协作
 
           ]
-        }
+        },
       ],
       '/function/': [
         {
@@ -120,41 +92,23 @@ module.exports = {
           collapsable: false,
           children: [
             '/function/core',          // 核心能力
-            '/function/component',     // 内置组件
-            '/function/solution',      // 业务封装
-            '/function/config',         // 配置
           ]
         },
         {
-          title: '内置组件',
+          title: '组件封装',
           collapsable: false,
           children: [
-            '/function/core',          // 核心能力
             '/function/component',     // 内置组件
-            '/function/solution',      // 业务封装
-            '/function/config',         // 配置
           ]
         },
         {
-          title: '业务封装',
+          title: '功能封装',
           collapsable: false,
           children: [
-            '/function/core',          // 核心能力
-            '/function/component',     // 内置组件
             '/function/solution',      // 业务封装
-            '/function/config',         // 配置
           ]
         },
-        {
-          title: '配置参考',
-          collapsable: false,
-          children: [
-            '/function/core',          // 核心能力
-            '/function/component',     // 内置组件
-            '/function/solution',      // 业务封装
-            '/function/config',         // 配置
-          ]
-        },
+
       ]
     },
   },

@@ -3,8 +3,8 @@ home: true
 heroImage: /logo.png
 heroText: CuttingMat
 tagline: 面向大中型项目的开发脚手架，助你的Vue项目一臂之力
-actionText: 开始使用 →
-actionLink: /doc/intro-getting-started/
+actionText: 快速开始 →
+actionLink: /guide/getting-started/
 
 features:
   - title: 简单可靠
