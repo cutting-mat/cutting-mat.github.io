@@ -74,25 +74,29 @@ export default [{
 
 3. 注册模块路由
 
-然后打开项目的模块配置文件（`@/module.config.js`），将新模块注册为子模块：
+然后打开项目的路由配置文件（`@/route.config.js`），将新模块注册到主路由中：
 
 ```js
 ...
-// 子模块
+// 主模块
+import main from '@/main/index'
+
+// 业务模块
 import system from '@/system'
 import user from '@/user'
 + import myFirstMoudle from '@/myFirstMoudle'
 
-export const subModules =  [
-+    ...myFirstMoudle,
-    ...system,
-    ...user,
-]
+// 主路由
+export const MainRoute = [Object.assign({}, main[0], {
+    children: [
++       ...myFirstMoudle,
+        ...system,
+        ...user,
+    ]
+})];
 
 ```
 
 这样新模块就创建完成了，启动开发服务，新路由（ http://localhost:8080/#/myFirstMoudle ）已经可以访问。
 
 模块包含自己的 API、静态资源、组件、页面和路由，如果你熟悉Vue开发，接下来该如何继续就很简单了。
-
-如果仍有疑问，可以继续浏览文档其他内容。
