@@ -4,12 +4,12 @@
 
 在相当多面向定制的前端团队中，基于 Vue-Cli模板+Element 开始一个项目仍然是惯常做法，随着项目迭代以及开发人员增加，很快就会出现一些普遍性问题，比如：
 
-- 文件目录庞大，找代码越来越费劲
+- 文件目录庞大，找代码费劲
 - 引用关系混乱，不知道一段代码被多少地方引用
-- 多人协作一不小心就代码冲突了
+- 多人协作代码冲突
 - 项目内反复造轮子
 - 代码冗余又不敢删
-- 不同人的开发风格自成一套，质量参差不齐
+- 多人开发风格自成一套，质量参差不齐
 - ……
 
 **CuttingMat（切割垫板）是基于 Vue 的前端开发脚手架，可以帮助前端团队轻松应对大中型项目挑战。**
@@ -37,9 +37,9 @@ CuttingMat 从以下几个方面着手，力求通过架构设计提高前端项
 - [x] 权限控制，基于角色实现路由、视图、请求任意颗粒度的权限控制（Power By [vue-access-control](https://github.com/tower1229/Vue-Access-Control/blob/master/README_CN.md)）
 - [x] 用户鉴权，整合Token续期方案
 - [x] 完整的异步请求管理方案
-- [x] 超薄丝滑的请求缓存设计（Power By [@cutting-mat/axios](https://github.com/cutting-mat/axios/blob/main/README_CN.md)）
+- [x] 丝滑的请求缓存设计（Power By [@cutting-mat/axios](https://github.com/cutting-mat/axios/blob/main/README_CN.md)）
 - [x] 更简单的状态管理（Power By [@cutting-mat/vue-store](https://github.com/cutting-mat/vue-store/blob/main/README_CN.md)）
-- [x] 更强大的上传组件（Power By [@cutting-mat/el-upload](https://github.com/cutting-mat/el-upload)）
+- [x] 更强大的上传组件（Power By [@cutting-mat/uploader](https://github.com/cutting-mat/uploader)）
 - [x] 核心功能模块化设计，一键开启/关闭
 - [x] 常用组件封装
 - [x] 常用 JS 方法封装

@@ -36,7 +36,7 @@ module.exports = {
         link: '/function/core/'
       }, {
         text: '演示',
-        link: 'http://cutting-mat.refined-x.com/template-element-ui/#/library'
+        link: 'http://cutting-mat.refined-x.com/template-element-ui/'
       }, {
         text: '插件',
         items: [{
@@ -48,7 +48,7 @@ module.exports = {
           link: 'http://cutting-mat.refined-x.com/vue-store/',
           target: '_blank'
         }, {
-          text: '@cutting-mat/el-upload',
+          text: '@cutting-mat/uploader',
           link: 'http://cutting-mat.refined-x.com/el-upload/',
           target: '_blank'
         }, {
