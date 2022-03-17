@@ -10,9 +10,9 @@ npm init @cutting-mat
 
 交互式CLI界面，支持三种模板选择：
 
-- `vue-element-ui`：CuttingMat，基于element-ui的PC端项目模板
-- `vue-vant`：基于vant-ui的移动端的项目模板（完善中...）
-- `electron`：基于electron的客户端项目模板（完善中...）
+- `template-element-ui`：基于 element-ui 的PC端项目模板
+- `template-vant4`：基于 vant4 的移动端的项目模板（完善中...）
+- `template-electron`：基于 electron 的客户端项目模板（完善中...）
 
 或者从 git repository 拉取项目模板。
 
