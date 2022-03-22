@@ -81,34 +81,34 @@ module.exports = {
             '/guide/intro-code',               // 代码组织
             '/guide/guide-config',             // vue-cli 配置、babel 兼容性配置、eslint 代码检查配置、vue 全局功能配置、多环境配置
             '/guide/appointment-dev',          // 开发约定
-            '/guide/appointment-department',   // 部门协作
+            '/guide/icon',   // 部门协作
 
           ]
         },
       ],
       '/function/': [
         {
-          title: '核心能力',
+          title: '核心插件',
           collapsable: false,
           children: [
-            '/function/core',          // 核心能力
+            '/function/plugin',
           ]
         },
         {
-          title: '组件封装',
+          title: '内置组件',
           collapsable: false,
           children: [
-            '/function/component',     // 内置组件
+            '/function/component',
           ]
         },
         {
           title: '功能封装',
           collapsable: false,
           children: [
-            '/function/solution',      // 业务封装
+            '/function/solution',
           ]
         },
-
+        
       ]
     },
   },
