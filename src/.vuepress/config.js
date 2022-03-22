@@ -87,6 +87,13 @@ module.exports = {
       ],
       '/function/': [
         {
+          title: '核心能力',
+          collapsable: false,
+          children: [
+            '/function/core',
+          ]
+        },
+        {
           title: '核心插件',
           collapsable: false,
           children: [
@@ -107,11 +114,13 @@ module.exports = {
             '/function/solution',
           ]
         },
-        
+
       ]
     },
   },
   plugins: [
+    '@vuepress/back-to-top',
+    '@vuepress/active-header-links',
     [
       'vuepress-plugin-container',
       {

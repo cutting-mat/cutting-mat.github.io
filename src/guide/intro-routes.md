@@ -62,12 +62,12 @@ import { MainRoute } from "@/route.config";
 
 ```
 
-开启权限控制（`access-control`）的情况下，用户的可访问菜单应该随权限动态变化，因此不能直接拿静态的路由数据实现导航菜单，而要在权限功能配置（`@/permission.config.js`）中定义`AfterGetDynamicRoute()`方法，在获取动态路由后将动态路由存储，从而用于实现动态菜单或其他业务场景。
+开启权限控制（`access-control`）的情况下，用户的可访问菜单应该随权限动态变化，因此不能直接拿静态的路由数据实现导航菜单，而要在权限功能配置（`@/plugin.permission.config.js`）中定义`AfterGetDynamicRoute()`方法，在获取动态路由后将动态路由存储，从而用于实现动态菜单或其他业务场景。
 
-例如模板默认`@/permission.config.js`文件中定义的`AfterGetDynamicRoute`方法为：将动态路由存入`$store.state.DynamicRoute`。
+例如模板默认`@/plugin.permission.config.js`文件中定义的`AfterGetDynamicRoute`方法为：将动态路由存入`$store.state.DynamicRoute`。
 
 ```js
-// 默认的@/permission.config.js
+// 默认的@/plugin.permission.config.js
 ...
 // 获取路由权限后回调
 export const AfterGetDynamicRoute = routes => Vue.$store.set("DynamicRoute", routes);

@@ -42,7 +42,7 @@ CuttingMat 使用 [iconfont](https://www.iconfont.cn/) 字体图标库。
 
 [template-element-ui](https://github.com/cutting-mat/template-element-ui) 使用Element-UI组件库，[官方文档](https://element.eleme.cn/#/zh-CN/component/changelog)。
 
-[template-mobile](https://github.com/cutting-mat/template-mobile) 使用 Vant3 组件库，[官方文档](https://vant-contrib.gitee.io/vant/#/zh-CN/changelog)。
+[template-vant](https://github.com/cutting-mat/template-vant) 使用 Vant4 组件库，[官方文档](https://vant-contrib.gitee.io/vant/v4/#/zh-CN/changelog)。
 
 ## 新增一个模块
 
