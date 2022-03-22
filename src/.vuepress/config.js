@@ -79,10 +79,9 @@ module.exports = {
             '/guide/intro-catalogue',         // 目录结构
             '/guide/intro-routes',            // 路由结构
             '/guide/intro-code',               // 代码组织
+            '/guide/icon',   // 字体图标
             '/guide/guide-config',             // vue-cli 配置、babel 兼容性配置、eslint 代码检查配置、vue 全局功能配置、多环境配置
             '/guide/appointment-dev',          // 开发约定
-            '/guide/icon',   // 部门协作
-
           ]
         },
       ],

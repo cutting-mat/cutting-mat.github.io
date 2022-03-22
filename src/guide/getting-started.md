@@ -34,7 +34,9 @@ npm run build       // 构建生产环境代码
 
 CuttingMat 使用 [iconfont](https://www.iconfont.cn/) 字体图标库。
 
-图标字体文件目录：`@/core/assets/font/`
+内置字体文件目录：`@/core/assets/font/`
+
+内置图标列表：[图标库](/guide/icon.html)
 
 ## 三方UI库
 
