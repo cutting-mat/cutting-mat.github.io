@@ -132,7 +132,7 @@ import { MainRoute } from "@/route.config";
 // @/plugin.permission.config.js
 ...
 // 获取路由权限后回调
-export const AfterGetDynamicRoute = routes => Vue.$store.set("DynamicRoute", routes);
+export const AfterGetDynamicRoute = routes => $store.set("DynamicRoute", routes);
 
 
 ```
