@@ -57,43 +57,43 @@ module.exports = {
           target: '_blank'
         }]
       }],
-    sidebar: [
-      {
-        text: '指南',
-        children: [
-          {
-            text: '介绍',
-            children: [
-              '/guide/',                    // 介绍
-              '/guide/getting-started',         // 快速开始
-              '/guide/community',              // 社区
-            ]
-          },
-          {
-            text: '指南',
-            children: [
-              '/guide/intro-catalogue',         // 目录结构
-              '/guide/intro-routes',            // 路由结构
-              '/guide/intro-code',               // 代码组织
-              '/guide/icon',   // 字体图标
-              '/guide/guide-config',             // vue-cli 配置、babel 兼容性配置、eslint 代码检查配置、vue 全局功能配置、多环境配置
-              '/guide/appointment-dev',          // 开发约定
-            ]
-          },
-        ]
-      }, {
-        text: '功能',
-        children: [
-          '/function/core',
-          '/function/plugin',
-          '/function/component',
-          '/function/solution'
+    sidebar: {
+      '/guide/': [
+        {
+          text: '介绍',
+          children: [
+            '/guide/',                    // 介绍
+            '/guide/getting-started',         // 快速开始
+            '/guide/community',              // 社区
+          ]
+        }, {
+          text: '指南',
+          children: [
+            '/guide/intro-catalogue',         // 目录结构
+            '/guide/intro-routes',            // 路由结构
+            '/guide/intro-code',               // 代码组织
+            '/guide/icon',   // 字体图标
+            '/guide/guide-config',             // vue-cli 配置、babel 兼容性配置、eslint 代码检查配置、vue 全局功能配置、多环境配置
+            '/guide/appointment-dev',          // 开发约定
+          ]
+        }
+      ],
+      '/function/': [
+        {
+          text: '功能',
+          children: [
+            '/function/',
+            '/function/core',
+            '/function/plugin',
+            '/function/component',
+            '/function/solution'
 
-        ]
-      }
-    ],
+          ]
+        }
+      ]
+    },
     repo: 'cutting-mat',
-    editLinks: false,
+    editLink: false,
 
   },
   plugins: [
