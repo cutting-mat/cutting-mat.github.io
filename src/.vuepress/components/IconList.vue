@@ -3318,7 +3318,7 @@ export default {
   mounted() {
     const $ul = document.getElementById("IconListWrap");
     if ($ul) {
-      $ul.addEventListener("click", function (e) {
+      $ul.addEventListener("click", (e) => {
         let $li;
         if (e.target && e.target.nodeName.toLowerCase() === "li") {
           $li = e.target
@@ -3331,7 +3331,7 @@ export default {
         let value = $li.querySelector('.code-name').innerText;
 
         clipboard(value).then(res => {
-          console.log(res)
+          this.$message.success(`字体编码已复制到剪贴板 ${res}`)
         })
       })
     };
@@ -3344,7 +3344,7 @@ export default {
   overflow: hidden;
   border: 1px solid #eaeefb;
   border-radius: 4px;
-  list-style:none;
+  list-style: none;
 }
 .icon_lists .dib {
   float: left;

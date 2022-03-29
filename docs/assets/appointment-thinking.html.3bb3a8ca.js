@@ -1,0 +1,1 @@
+const t={key:"v-f72ea7e2",path:"/guide/appointment-thinking.html",title:"\u524D\u7AEF\u7EC4\u4EF6\u5C01\u88C5\u601D\u8DEF",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:164620062e4,contributors:[{name:"tower1229",email:"tower1229@foxmail.com",commits:3}]},filePathRelative:"guide/appointment-thinking.md"};export{t as data};

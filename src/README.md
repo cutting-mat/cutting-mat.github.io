@@ -3,8 +3,10 @@ home: true
 heroImage: /logo.png
 heroText: CuttingMat
 tagline: 面向大中型项目的开发脚手架，助你的Vue项目一臂之力
-actionText: 快速开始 →
-actionLink: /guide/getting-started/
+actions:
+  - text: 快速开始 →
+    link: /guide/getting-started/
+    type: primary
 
 features:
   - title: 简单可靠
@@ -15,5 +17,6 @@ features:
     details: 基础模板+生态 模式，保持脚手架干净整洁，真正开箱即用，而不是~~开箱先删~~
 
 footer: 遵循 MIT 开源协议 Made by @tower1229(refined-x.com)
+footerHtml: true
 
 ---

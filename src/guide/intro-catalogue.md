@@ -13,6 +13,7 @@
 |   |--system/                          // 业务模块（内置系统管理）
 |   |--user/                            // 业务模块（内置用户管理）
 |   |--App.vue                          // Vue 根组件
+|   |--element-ui.install.js            // ElementUI按需引入插件
 |   |--main.js                          // 构建入口
 |   |--plugin.dict-control.config.js    // 字典控件配置（框架）
 |   |--plugin.global-function.config.js // 全局功能注册（框架）

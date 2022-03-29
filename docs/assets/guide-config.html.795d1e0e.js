@@ -1,0 +1,1 @@
+const e={key:"v-7814661a",path:"/guide/guide-config.html",title:"\u914D\u7F6E\u53C2\u8003",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1647345164e3,contributors:[{name:"tower1229",email:"tower1229@foxmail.com",commits:2}]},filePathRelative:"guide/guide-config.md"};export{e as data};

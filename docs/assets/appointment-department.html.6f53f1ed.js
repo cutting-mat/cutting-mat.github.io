@@ -1,0 +1,1 @@
+const t={key:"v-62bc122d",path:"/guide/appointment-department.html",title:"\u90E8\u95E8\u534F\u4F5C\u89C4\u5219",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:164620062e4,contributors:[{name:"tower1229",email:"tower1229@foxmail.com",commits:3}]},filePathRelative:"guide/appointment-department.md"};export{t as data};
