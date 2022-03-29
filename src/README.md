@@ -5,7 +5,7 @@ heroText: CuttingMat
 tagline: 面向大中型项目的开发脚手架，助你的Vue项目一臂之力
 actions:
   - text: 快速开始 →
-    link: /guide/getting-started/
+    link: /guide/getting-started.html
     type: primary
 
 features:
