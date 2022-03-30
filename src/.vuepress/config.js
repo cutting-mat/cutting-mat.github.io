@@ -132,7 +132,13 @@ module.exports = {
         after: '</div>'
       }
     ],
-
+    [
+      '@vuepress/plugin-search',
+      {
+        // 排除首页
+        isSearchable: (page) => page.path !== '/',
+      },
+    ]
   ],
   dest: 'docs'
 }

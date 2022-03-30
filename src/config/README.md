@@ -494,3 +494,29 @@ export default {
         "t-zip": [".zip", ".rar"],
     }
 ```
+
+## 构建配置
+
+默认使用`Vue-CLI`构建，构建配置文件`/vue.config.js`。
+
+### 浏览器兼容性
+
+默认兼容`IE11`。
+
+如果使用的npm包不兼容IE，需要将npm包名添加到构建配置文件的`transpileDependencies`项。
+
+### 常用配置项
+
+|  配置项   | 详情  | 默认值  |
+|  ----  | ----  | ----  |
+| `css.sourceMap`  | 开启css map, 方便调试 | `true` |
+| `productionSourceMap`  | 生产环境关闭map | `false` |
+| `integrity`  | 生产环境开启子资源完整性校验（SRI） | `true` |
+| `outputDir`  | 构建目录 | `'dist'` |
+| `publicPath`  | 生产/开发环境构建路径 | `/` |
+
+### 分包策略
+
+通常依赖中最占体积的是UI组件库，所以默认将三方UI库单独打包，其余的`node_modules`依赖文件打成一个包。
+
+详见`/vue.config.js`的`chainWebpack`配置。

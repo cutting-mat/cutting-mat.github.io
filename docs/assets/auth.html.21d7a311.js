@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as a,a as o,e as s}from"./app.3c80f30d.js";const c={},r={id:"\u8EAB\u4EFD\u9A8C\u8BC1\u63D2\u4EF6",tabindex:"-1"},_=o("a",{class:"header-anchor",href:"#\u8EAB\u4EFD\u9A8C\u8BC1\u63D2\u4EF6","aria-hidden":"true"},"#",-1),n=s(" \u8EAB\u4EFD\u9A8C\u8BC1\u63D2\u4EF6"),d=[_,n];function h(i,f){return t(),a("h1",r,d)}var m=e(c,[["render",h]]);export{m as default};

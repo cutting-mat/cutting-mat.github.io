@@ -1,0 +1,1 @@
+import{_ as e,o as s,c as t,a,e as o}from"./app.e724a602.js";const r={},c={id:"inputpassword",tabindex:"-1"},n=a("a",{class:"header-anchor",href:"#inputpassword","aria-hidden":"true"},"#",-1),d=o(" InputPassword"),_=[n,d];function i(h,p){return s(),t("h1",c,_)}var f=e(r,[["render",i]]);export{f as default};
