@@ -37,7 +37,7 @@ module.exports = {
         link: '/config/',
       }, {
         text: '功能',
-        link: '/function/',
+        link: '/function/core/global-set/',
       }, {
         text: '演示',
         link: 'http://cutting-mat.refined-x.com/template-element-ui/'
@@ -76,7 +76,6 @@ module.exports = {
             '/guide/intro-catalogue',         // 目录结构
             '/guide/intro-routes',            // 路由结构
             '/guide/intro-code',              // 代码组织
-            '/guide/icon',                    // 字体图标
             '/guide/appointment',             // 开发约定
           ]
         }
@@ -86,21 +85,40 @@ module.exports = {
       ],
       '/function/': [
         {
-          text: '功能',
+          text: '核心功能',
           children: [
-            '/function/',
-            '/function/core',
-            '/function/plugin',
-            '/function/component',
-            '/function/solution'
-
+            '/function/core/global-set/',
+            '/function/core/iconfont/',
+            '/function/core/request/',
+            '/function/core/util/',
+            '/function/core/event/',
           ]
-        }
+        },
+        {
+          text: '核心插件',
+          children: [
+            '/function/plugin/auth/',
+            '/function/plugin/curd/',
+            '/function/plugin/dict-control/',
+            '/function/plugin/global-function/',
+            '/function/plugin/permission/',
+            '/function/plugin/store/',
+            '/function/plugin/upload/',
+          ]
+        },
+        {
+          text: '内置组件',
+          children: [
+            '/function/component/CountdownButton/',
+            '/function/component/InputNumber/',
+            '/function/component/InputPassword/',
+          ]
+        },
+        '/function/solution/'
       ]
     },
     repo: 'cutting-mat',
     editLink: false,
-
   },
   plugins: [
     '@vuepress/back-to-top',

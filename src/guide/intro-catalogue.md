@@ -14,11 +14,11 @@
 |   |--user/                            // 业务模块（内置用户管理）
 |   |--App.vue                          // Vue 根组件
 |   |--main.js                          // 构建入口
-|   |--plugin.dict-control.config.js    // 字典控件配置（框架）
-|   |--plugin.global-function.config.js // 全局功能配置（框架）
-|   |--plugin.permission.config.js      // 权限功能配置（框架）
-|   |--plugin.store.config.js           // 状态管理配置（框架）
-|   |--plugin.upload.config.js          // 上传组件配置（框架）
+|   |--plugin.dict-control.config.js    // 数据字典控件配置（框架）
+|   |--plugin.global-function.config.js // Vue全局功能配置（框架）
+|   |--plugin.permission.config.js      // 权限插件配置（框架）
+|   |--plugin.store.config.js           // 状态管理插件配置（框架）
+|   |--plugin.upload.config.js          // 上传插件配置（框架）
 |   |--pre-install.js                   // 预安装文件（框架）
 |   |--request.config.js                // 请求配置（框架）
 |   ·--route.config.js                  // 路由配置（框架）

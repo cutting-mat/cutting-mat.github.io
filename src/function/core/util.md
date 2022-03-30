@@ -1,37 +1,8 @@
-# 核心能力
+# 工具类库
 
-## 全局样式预设
-
-全局样式文件（`@/core/global.css`）默认被根组件（`@/core/App.vue`）引用，作用于项目全局，包含最最常用的样式预设。
-
-### CSS Reset
-
-重置浏览器默认样式，并统一滚动条样式与Mac Safari风格一致。
-
-[参考源码](https://github.com/cutting-mat/template-element-ui/blob/master/src/core/global.css#L1)
-
-### 字体图标
-
-在[icon font](https://www.iconfont.cn/)配置自己的字体图标项目，unicode 方式引用，图标类名`.ion`。下载字体文件到`src/core/fonts/`文件夹，替换已有文件即可。
-
-``` html
-<!-- 使用示例 -->
-
-<i class="ion">&#xe6a9;</i>
-<i class="ion">&#xe74f;</i>
-```
-
-[参考源码](https://github.com/cutting-mat/template-element-ui/blob/master/src/core/global.css#L150)
-
-### CSS组件
-
-内置常用的CSS组件，如flex栅格、固定宽高比矩形、单行文字等。
-
-为防止后期组件调整与文档不一致，这里就不一一列举了。
-
-[参考源码](https://github.com/cutting-mat/template-element-ui/blob/master/src/core/global.css#L198)
-
-## 工具类库
+::: warning
+文档未完成
+:::
 
 工具类库（`@/core/util.js`）是预置的实用工具，在`@/core/index.js`中默认导出，便于引用。
 
@@ -47,7 +18,7 @@ import * as util from "@/core";
 import {storage} from "@/core";
 ```
 
-### storage(key, [value])
+## storage(key, [value])
 
 本地存储，基于`window.localStorage`实现，支持JSON格式存取前自动转换
 
@@ -55,14 +26,14 @@ import {storage} from "@/core";
 - @param value[any] 要存的值，若缺省则返回key的值
 - @return 只传key会返回该key的值
 
-### deepcopy(source)
+## deepcopy(source)
 
 对象/数组深拷贝
 
 - @param source[Object|Array] 要拷贝的对象
 - @return 深拷贝后的对象/数组
 
-### buildTree(array, [parentKey], [sortFunction])
+## buildTree(array, [parentKey], [sortFunction])
 
 一维对象数组转树形结构
 
@@ -71,7 +42,7 @@ import {storage} from "@/core";
 - @param sortFunction[Function] 用于arrayObject.sort(sortFunction)的排序方法，默认不排序
 - @return 由children键建立层级的对象数组
 
-### formatDate(value, [fmt])
+## formatDate(value, [fmt])
 
 日期格式化
 
@@ -87,28 +58,28 @@ import {storage} from "@/core";
 | day  | yyyy/MM/dd |
 | day-time  | yyyy/MM/dd hh:mm |
 
-### on(eventName, eventHandle)
+## on(eventName, eventHandle)
 
 全局事件监听。重复注册同一个事件，只保留最后一次，使单页面应用反复进入页面不会重复注册事件；可以通过别名方式将一个事件多次注册。
 
 - @param eventName[String] 自定义事件名称，支持用双下划线添加别名，如 eventName__ANYSTRING
 - @param eventHandle[Function] 事件回调方法，参数接收触发事件方法发送的参数；缺省将关闭该事件监听
 
-### emit(eventName, [msg])
+## emit(eventName, [msg])
 
 全局事件触发
 
 - @param eventName[String] 要触发的事件名称，不需要包含别名部分，如 "myEvent__alias1"，只需要传 "myEvent"
 - @param msg[any] 触发事件时携带的参数
 
-### getSuffix(filename)
+## getSuffix(filename)
 
 提取文件名中的扩展名
 
 - @param filename[String] 要提取扩展名的字符串
 - @return 转小写后的扩展名
 
-### throttle(method, [delay, duration])
+## throttle(method, [delay, duration])
 
 函数节流
 
@@ -117,7 +88,7 @@ import {storage} from "@/core";
 - @param duration 至少执行一次的间隔毫秒数，默认1000
 - @return 具有节流特性的新函数
 
-### getUrlParam(keyName, [url])
+## getUrlParam(keyName, [url])
 
 获取url中的query值
 
@@ -125,16 +96,16 @@ import {storage} from "@/core";
 - @param url[String] 目标url，缺省则取当前窗口url
 - @return keyName参数的值，如果获取失败返回`null`
 
-## Vue全局功能
+# Vue全局功能
 
 将高频使用的Vue功能全局注册可以显著提高开发效率，在多人协作的项目中，Vue全局功能必须有一个明确、集中的管理方式，否则很容易导致全局功能得不到充分利用，项目内各自造轮子的情况。
 
-### 注册器
+## 注册器
 
 全局功能注册器（`@/core/register.js`）是一个专门注册Vue全局功能的Vue插件，在项目入口文件（`@/main.js`）中调用。原则上项目中的所有Vue全局功能都应该在这里注册，包括：方法、组件、过滤器、指令等。
 
 注册全局功能应遵循**谨慎且必要**原则，通常我们会将通用UI组件、高频功能组件全局注册，避免客户端频繁加载同一个组件。
-### 开发须知
+## 开发须知
 
 - 由于通用增删改查组件（`@/main/components/BaseCURD.vue`）的实现机制，数据模型中指定的展示控件也必须注册为全局组件。
 
@@ -175,86 +146,3 @@ export default {
 
         ...
 ```
-
-## 网络请求
-
-`@/core/request.js`输出全局公用的axios实例，该实例封装了基础请求配置、 request 拦截器、response 拦截器、统一的错误处理、baseURL 设置等。
-
-### 请求配置
-
-默认配置`baseURL`、超时时间、`Content-Type`请求头。
-
-其中`baseURL`的配置我们用匹配域名的方式，使一套前端代码可以匹配多套后端环境，构建发布时不需要额外修改前端请求配置。
-
-```js
-import axios from 'axios';
-import * as util from '@/core';
-// 环境配置
-const ENVIRONMENT = {
-    mock: 'http://rap2api.taobao.org/app/mock/223572',
-    dev: 'http://zjsz.kaifa/japi',
-    test: 'http://test.com/api',
-    master: '//master.com/api'
-};
-
-const HASH = {
-    "dev.com": ENVIRONMENT.dev,
-    "test.com": ENVIRONMENT.test,
-    "master.com": ENVIRONMENT.master
-}
-
-export const baseURL = HASH[window.location.host] || ENVIRONMENT.dev;
-...
-
-```
-
-### 参数处理
-
-统一预处理请求参数，将get和delete请求中的空字符参数，统一替换为`null`。
-
-### 异常处理
-
-异常分为请求状态异常和业务状态异常，请求状态主要根据`HTTP Status Code`确定，状态码规则参考RESTFul；业务状态主要根据`response.data.code`确定，接口规则详见[接口响应规则约定]()。
-
-### Token续期机制
-
-### 数据缓存机制
-
-## 模块间通信
-
-### Store
-
-大多数项目其实不需要vuex，根目录下`store.js`维护了一个[简单store模式](https://cn.vuejs.org/v2/guide/state-management.html#%E7%AE%80%E5%8D%95%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86%E8%B5%B7%E6%AD%A5%E4%BD%BF%E7%94%A8)，支持同步、异步数据存取，用于共享或缓存数据，`common/components/nav.vue`和`common/components/header.vue`里都有用例。
-
-```javascript
-// API示例：
-import { store } from "@/store";
-// 同步存
-store.set('a', 1);
-// 同步取
-store.get('a'); // 1
-// 异步取
-store.action('someKey').then(res => {
-    // res
-})
-// 刷新缓存数据
-store.action('someKey', true).then(res => {
-    // res
-})
-```
-
-其中异步数据（action）具有并发请求队列机制，同一时间同一key的多次请求，实际只发起一次ajax，其余请求将进入队列，等候ajax返回后集中resolve。
-
-异步数据获取逻辑需要在store.js内部定义，这里就不贴代码了。
-
-其他没了。
-
-:::tip 提示
-注意那些 prop 会在一个组件实例创建**之前**进行验证，所以实例的 property (如 `data`、`computed` 等) 在 `default` 或 `validator` 函数中是不可用的。
-:::
-
-### Event
-
-全局事件机制
-
-## 权限控制
