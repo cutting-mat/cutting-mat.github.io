@@ -1,8 +1,6 @@
 # 快速开始
 
-## 初始化项目
-
-使用npm初始化CuttingMat项目。
+## 使用npm初始化
 
 ``` bash
 npm init @cutting-mat
@@ -10,15 +8,39 @@ npm init @cutting-mat
 
 交互式CLI界面，支持三种模板选择：
 
-- `template-element-ui`：基于 element-ui 的PC端项目模板
-- `template-vant4`：基于 vant4 的移动端的项目模板（完善中...）
-- `template-electron`：基于 electron 的客户端项目模板（完善中...）
+- `template-element-ui`：基于 Element-UI 的PC端项目模板
+- `template-element-plus`：基于 Element-Plus 的移动端的项目模板（完善中...）
+- `template-vant`：基于 Vant4 的移动端的项目模板（完善中...）
+- `template-electron`：基于 Electron 的客户端项目模板（完善中...）
 
-或者从 git repository 拉取项目模板。
+## 拉取初始化模板
+
+或者从 git repository 拉取项目初始模板。
+
+<CodeGroup>
+    <CodeGroupItem title="Element-UI" active>
 
 ``` bash
 git clone https://github.com/cutting-mat/template-element-ui.git
 ```
+
+  </CodeGroupItem>
+  <CodeGroupItem title="Element-Plus">
+
+``` bash
+git clone https://github.com/cutting-mat/template-element-plus.git
+```
+
+  </CodeGroupItem>
+  <CodeGroupItem title="Vant">
+
+``` bash
+git clone https://github.com/cutting-mat/template-vant.git
+```
+
+  </CodeGroupItem>
+</CodeGroup>
+
 
 ## 开发服务
 
