@@ -1,0 +1,1 @@
+const t={key:"v-029cf6f6",path:"/function/component/InputNumber.html",title:"InputNumber",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1648630732e3,contributors:[{name:"tower1229",email:"tower1229@foxmail.com",commits:1}]},filePathRelative:"function/component/InputNumber.md"};export{t as data};

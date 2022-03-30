@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as o,a as n,e as a}from"./app.3c80f30d.js";const c={},s={id:"countdownbutton",tabindex:"-1"},r=n("a",{class:"header-anchor",href:"#countdownbutton","aria-hidden":"true"},"#",-1),d=a(" CountdownButton"),_=[r,d];function u(h,i){return e(),o("h1",s,_)}var l=t(c,[["render",u]]);export{l as default};

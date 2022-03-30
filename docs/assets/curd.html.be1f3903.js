@@ -1,0 +1,1 @@
+const t={key:"v-00cf61d7",path:"/function/plugin/curd.html",title:"\u589E\u5220\u6539\u67E5\u7EC4\u4EF6",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1648630732e3,contributors:[{name:"tower1229",email:"tower1229@foxmail.com",commits:1}]},filePathRelative:"function/plugin/curd.md"};export{t as data};

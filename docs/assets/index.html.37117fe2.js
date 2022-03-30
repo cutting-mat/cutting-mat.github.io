@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a,a as o,e as s}from"./app.3c80f30d.js";const c={},r={id:"\u89E3\u51B3\u65B9\u6848",tabindex:"-1"},_=o("a",{class:"header-anchor",href:"#\u89E3\u51B3\u65B9\u6848","aria-hidden":"true"},"#",-1),n=s(" \u89E3\u51B3\u65B9\u6848"),d=[_,n];function i(h,f){return t(),a("h1",r,d)}var x=e(c,[["render",i]]);export{x as default};
