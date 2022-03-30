@@ -16,7 +16,7 @@
 
 ### 全局样式
 
-框架内置全局样式文件`@/core/assets/global.css`，默认包含浏览器样式重置、CSS组件、自定义UI库样式，详见[全局样式]()
+框架内置全局样式文件`@/core/assets/global.css`，默认包含浏览器样式重置、CSS组件、自定义UI库样式，详见[全局样式](/function/core/global-set/)。
 
 ```js
 // 加载全局样式
@@ -392,7 +392,7 @@ export default {
 
 ## 上传插件配置
 
-`@/plugin.upload.config.js`
+上传插件配置文件`@/plugin.upload.config.js`，可以对[上传插件](/function/plugin/upload/)的默认配置进行设置。
 
 ### accept
 
@@ -497,15 +497,17 @@ export default {
 
 ## 构建配置
 
+### template-element-ui
+
 默认使用`Vue-CLI`构建，构建配置文件`/vue.config.js`。
 
-### 浏览器兼容性
+#### 浏览器兼容性
 
 默认兼容`IE11`。
 
 如果使用的npm包不兼容IE，需要将npm包名添加到构建配置文件的`transpileDependencies`项。
 
-### 常用配置项
+#### 常用配置项
 
 |  配置项   | 详情  | 默认值  |
 |  ----  | ----  | ----  |
@@ -515,8 +517,22 @@ export default {
 | `outputDir`  | 构建目录 | `'dist'` |
 | `publicPath`  | 生产/开发环境构建路径 | `/` |
 
-### 分包策略
+#### 分包策略
 
 通常依赖中最占体积的是UI组件库，所以默认将三方UI库单独打包，其余的`node_modules`依赖文件打成一个包。
 
 详见`/vue.config.js`的`chainWebpack`配置。
+
+### template-element-plus
+
+::: warning
+文档未完成
+:::
+
+
+### template-vant
+
+::: warning
+文档未完成
+:::
+
