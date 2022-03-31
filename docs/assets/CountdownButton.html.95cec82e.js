@@ -1,1 +1,0 @@
-const t={key:"v-2a77f034",path:"/function/component/CountdownButton.html",title:"CountdownButton",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1648630732e3,contributors:[{name:"tower1229",email:"tower1229@foxmail.com",commits:1}]},filePathRelative:"function/component/CountdownButton.md"};export{t as data};

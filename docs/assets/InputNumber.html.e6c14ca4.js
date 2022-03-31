@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as r,a,e as n}from"./app.fc27d33b.js";const o={},s={id:"inputnumber",tabindex:"-1"},c=a("a",{class:"header-anchor",href:"#inputnumber","aria-hidden":"true"},"#",-1),_=n(" InputNumber"),d=[c,_];function i(u,h){return t(),r("h1",s,d)}var p=e(o,[["render",i]]);export{p as default};

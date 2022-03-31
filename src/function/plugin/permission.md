@@ -1,5 +1,9 @@
 # 权限模块
 
+::: tip 依赖
+- [状态管理插件](/function/plugin/store/)
+:::
+
 ## 权限控制方案
 
 [Vue-Access-Control](https://github.com/tower1229/Vue-Access-Control)提供了可能是目前最灵活、细致的前端权限控制能力，完全兼容RESTful，教科书级的权限关系，清晰易懂，`菜单 + 请求 => 角色 => 账号`。

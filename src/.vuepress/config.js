@@ -76,6 +76,7 @@ module.exports = {
             '/guide/intro-catalogue',         // 目录结构
             '/guide/intro-routes',            // 路由结构
             '/guide/intro-code',              // 代码组织
+            '/guide/architecture',            // 核心流程
             '/guide/appointment',             // 开发约定
           ]
         }
@@ -92,6 +93,7 @@ module.exports = {
             '/function/core/request/',
             '/function/core/util/',
             '/function/core/event/',
+            '/function/core/component/',
           ]
         },
         {
@@ -106,15 +108,7 @@ module.exports = {
             '/function/plugin/upload/',
           ]
         },
-        {
-          text: '内置组件',
-          children: [
-            '/function/component/CountdownButton/',
-            '/function/component/InputNumber/',
-            '/function/component/InputPassword/',
-          ]
-        },
-        '/function/solution/'
+
       ]
     },
     repo: 'cutting-mat',
