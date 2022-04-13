@@ -4,11 +4,11 @@
 
 预安装文件`@/pre-install.js`会在框架核心插件安装前执行，可以在这里安装前置依赖或其他插件。
 
-### 三方UI库
+### 三方 UI 库
 
-为减少打包体积，模板默认以按需引入方式安装三方UI库，默认引入的组件可以在`@/pre-install.js`中修改。
+为减少打包体积，模板默认以按需引入方式安装三方 UI 库，默认引入的组件可以在`@/pre-install.js`中修改。
 
-按需引入方式参考各UI官方文档：
+按需引入方式参考各 UI 官方文档：
 
 - [Element-UI](https://element.eleme.cn/#/zh-CN/component/quickstart)
 - [Element-Plus](https://element-plus.org/zh-CN/guide/quickstart.html#%E6%8C%89%E9%9C%80%E5%AF%BC%E5%85%A5)
@@ -16,12 +16,11 @@
 
 ### 全局样式
 
-框架内置全局样式文件`@/core/assets/global.css`，默认包含浏览器样式重置、CSS组件、自定义UI库样式，详见[全局样式](/function/core/global-set/)。
+框架内置全局样式文件`@/core/assets/global.css`，默认包含浏览器样式重置、CSS 组件、自定义 UI 库样式，详见[全局样式](/function/core/global-set/)。
 
 ```js
 // 加载全局样式
-import '@/core/assets/global.css';
-
+import "@/core/assets/global.css";
 ```
 
 ## 请求配置
@@ -31,7 +30,7 @@ import '@/core/assets/global.css';
 ### baseURL
 
 - 类型：`String`
-- 详情：请求baseURL
+- 详情：请求 baseURL
 - 默认：根据应用域名自动切换
 
 ```js
@@ -59,7 +58,7 @@ export default {
 ### timeout
 
 - 类型：`Number`
-- 详情：请求超时时间，单位ms
+- 详情：请求超时时间，单位 ms
 - 默认：`10000`
 
 ### headers
@@ -69,9 +68,9 @@ export default {
 - 默认：
 
 ```json
-    {
-        "Content-Type": "application/json"
-    }
+{
+  "Content-Type": "application/json"
+}
 ```
 
 ## 路由配置
@@ -88,19 +87,18 @@ export default {
 
 ```js
 // 主模块
-import main from '@/main/index'
+import main from "@/main/index";
 
 // 业务模块
-import user from '@/user'
-import system from '@/system'
+import user from "@/user";
+import system from "@/system";
 
 // 主路由
-export const MainRoute = [Object.assign({}, main[0], {
-    children: [
-        ...user,
-        ...system,
-    ]
-})];
+export const MainRoute = [
+  Object.assign({}, main[0], {
+    children: [...user, ...system],
+  }),
+];
 ```
 
 ### [export] BypassRoute
@@ -111,9 +109,7 @@ export const MainRoute = [Object.assign({}, main[0], {
 
 ```js
 // 旁路路由
-export const BypassRoute = [
-    ...main.slice(1),
-]
+export const BypassRoute = [...main.slice(1)];
 ```
 
 ## 数据字典控件配置
@@ -158,10 +154,9 @@ export const BypassRoute = [
 - 示例：
 
 ```js
-
 export default {
-    responseTransfer(res) {
-        /**
+  responseTransfer(res) {
+    /**
          * 数据字典格式:
          * [{
               value: 'yizhi',
@@ -176,15 +171,15 @@ export default {
               value: 'kekong',
               label: '可控'
             }]
-         * */ 
-        return res.data.list
-    }
-}
+         * */
+    return res.data.list;
+  },
+};
 ```
 
-## Vue全局功能注册
+## Vue 全局功能注册
 
-可以通过全局功能配置文件`@/plugin.global-function.config.js`，配置[Vue全局功能注册插件](/function/plugin/global-function/)。
+可以通过全局功能配置文件`@/plugin.global-function.config.js`，配置[Vue 全局功能注册插件](/function/plugin/global-function/)。
 
 ### [export] components
 
@@ -194,12 +189,12 @@ export default {
 
 ```js
 export const components = {
-    Header,
-    Breadcrumb: () => import("@/main/components/Breadcrumb.vue"),
-    SubNav: () => import("@/main/components/SubNav.vue"),
-    Pagination: () => import("@/main/components/Pagination.vue"),
-    ToolBar: () => import("@/main/components/ToolBar.vue"),
-}
+  Header,
+  Breadcrumb: () => import("@/main/components/Breadcrumb.vue"),
+  SubNav: () => import("@/main/components/SubNav.vue"),
+  Pagination: () => import("@/main/components/Pagination.vue"),
+  ToolBar: () => import("@/main/components/ToolBar.vue"),
+};
 ```
 
 ### [export] filters
@@ -209,11 +204,11 @@ export const components = {
 - 示例：
 
 ```js
- export const filters = {
-    "test"() {
-        return "test filters"
-    }
-}
+export const filters = {
+  test() {
+    return "test filters";
+  },
+};
 ```
 
 ### [export] directives
@@ -223,15 +218,15 @@ export const components = {
 - 示例：
 
 ```js
- export const directives = {
-    'test': {
-        inserted(el) {
-            setTimeout(() => {
-                el.innerText += ' test directive inject!'
-            }, 0)
-        }
-    }
-}
+export const directives = {
+  test: {
+    inserted(el) {
+      setTimeout(() => {
+        el.innerText += " test directive inject!";
+      }, 0);
+    },
+  },
+};
 ```
 
 ### [export] $methods
@@ -241,12 +236,12 @@ export const components = {
 - 示例：
 
 ```js
- export const $methods = {
-    $test() {
-        // 用于测试可删除
-        return ('test instance method output!')
-    }
-}
+export const $methods = {
+  $test() {
+    // 用于测试可删除
+    return "test instance method output!";
+  },
+};
 ```
 
 ### [export] methods
@@ -256,12 +251,11 @@ export const components = {
 - 示例：
 
 ```js
- export const methods = {
-    Test() {
-        return ('test globalMethod output!')
-    }
-}
-
+export const methods = {
+  Test() {
+    return "test globalMethod output!";
+  },
+};
 ```
 
 ## 权限插件配置
@@ -295,9 +289,9 @@ export const components = {
 
 ```js
 export const GetAccountToken = () => {
-    const storageFun = $store.state.rememberLogin ? localStorage : sessionStorage;
-    return storage("auth", undefined, storageFun)
-}
+  const storageFun = $store.state.rememberLogin ? localStorage : sessionStorage;
+  return storage("auth", undefined, storageFun);
+};
 ```
 
 ### [export] SetAccountToken
@@ -308,10 +302,10 @@ export const GetAccountToken = () => {
 - 默认：
 
 ```js
-export const SetAccountToken = token => {
-    const storageFun = $store.state.rememberLogin ? localStorage : sessionStorage;
-    return storage("auth", token, storageFun)
-}
+export const SetAccountToken = (token) => {
+  const storageFun = $store.state.rememberLogin ? localStorage : sessionStorage;
+  return storage("auth", token, storageFun);
+};
 ```
 
 ### [export] GetTokenFromLogin
@@ -322,8 +316,7 @@ export const SetAccountToken = token => {
 - 默认：
 
 ```js
-export const GetTokenFromLogin = res => res.data
-
+export const GetTokenFromLogin = (res) => res.data;
 ```
 
 ### [export] GetPermission
@@ -334,7 +327,6 @@ export const GetTokenFromLogin = res => res.data
 
 ```js
 export const GetPermission = () => $store.action("permission");
-
 ```
 
 ### [export] AfterGetDynamicRoute
@@ -345,7 +337,30 @@ export const GetPermission = () => $store.action("permission");
 - 默认：
 
 ```js
-export const AfterGetDynamicRoute = routes => $store.set("DynamicRoute", routes);
+export const AfterGetDynamicRoute = (routes) =>
+  $store.set("DynamicRoute", routes);
+```
+
+### [export] AuthFailedCallback
+
+- 类型：`Function`
+- 详情：用户认证失败回调
+- 参数：`to[Object], from[Object], next[Function]`，路由守卫(beforeEach)方法的同名参数
+- 默认：
+
+```js
+export const AuthFailedCallback = (to, from, next) => {
+  if (to.path !== "/login") {
+    // 未登录跳转登录页
+    let query = {
+      redirect: to.fullPath,
+    };
+    return next({
+      path: "/login",
+      query,
+    });
+  }
+};
 ```
 
 ## 状态管理插件配置
@@ -403,19 +418,19 @@ export default {
 ### v-model / value
 
 - 类型：`Array[Object]`
-- 详情：已上传文件数据, Object必须包含`url`字段
+- 详情：已上传文件数据, Object 必须包含`url`字段
 - 默认值：`[]`
 
 ### beforeUpload
 
 - 类型：`Function`
-- 详情：文件上传前的钩子，同el-upload, 将作为默认配置，可以被组件配置覆盖
+- 详情：文件上传前的钩子，同 el-upload, 将作为默认配置，可以被组件配置覆盖
 - 默认值：`-`
 
 ### onExceed
 
 - 类型：`Function`
-- 详情：文件超出个数限制时的钩子, 同el-upload, 将作为默认配置，可以被组件配置覆盖
+- 详情：文件超出个数限制时的钩子, 同 el-upload, 将作为默认配置，可以被组件配置覆盖
 - 默认值：`-`
 
 ### limitSize
@@ -505,21 +520,21 @@ export default {
 
 默认兼容`IE11`。
 
-如果使用的npm包不兼容IE，需要将npm包名添加到构建配置文件的`transpileDependencies`项。
+如果使用的 npm 包不兼容 IE，需要将 npm 包名添加到构建配置文件的`transpileDependencies`项。
 
 #### 常用配置项
 
-|  配置项   | 详情  | 默认值  |
-|  ----  | ----  | ----  |
-| `css.sourceMap`  | 开启css map, 方便调试 | `true` |
-| `productionSourceMap`  | 生产环境关闭map | `false` |
-| `integrity`  | 生产环境开启子资源完整性校验（SRI） | `true` |
-| `outputDir`  | 构建目录 | `'dist'` |
-| `publicPath`  | 生产/开发环境构建路径 | `/` |
+| 配置项                | 详情                                | 默认值   |
+| --------------------- | ----------------------------------- | -------- |
+| `css.sourceMap`       | 开启 css map, 方便调试              | `true`   |
+| `productionSourceMap` | 生产环境关闭 map                    | `false`  |
+| `integrity`           | 生产环境开启子资源完整性校验（SRI） | `true`   |
+| `outputDir`           | 构建目录                            | `'dist'` |
+| `publicPath`          | 生产/开发环境构建路径               | `/`      |
 
 #### 分包策略
 
-通常依赖中最占体积的是UI组件库，所以默认将三方UI库单独打包，其余的`node_modules`依赖文件打成一个包。
+通常依赖中最占体积的是 UI 组件库，所以默认将三方 UI 库单独打包，其余的`node_modules`依赖文件打成一个包。
 
 详见`/vue.config.js`的`chainWebpack`配置。
 
@@ -529,10 +544,8 @@ export default {
 文档未完成
 :::
 
-
 ### template-vant
 
 ::: warning
 文档未完成
 :::
-

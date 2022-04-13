@@ -35,7 +35,7 @@ CuttingMat 从以下几个方面着手，力求通过架构设计提高前端项
 - :white_check_mark: 主路由多套模板（Layout）自由切换
 - :white_check_mark: 天然支持旁路（白名单）的路由结构
 - :white_check_mark: 权限控制，基于角色实现路由、视图、请求任意颗粒度的权限控制（Power By [vue-access-control](https://github.com/tower1229/Vue-Access-Control/blob/master/README_CN.md)）
-- :white_check_mark: 用户鉴权，整合Token续期方案
+- :white_check_mark: 用户认证，整合Token续期方案
 - :white_check_mark: 完整的异步请求管理方案
 - :white_check_mark: 丝滑的请求缓存设计（Power By [@cutting-mat/axios](https://github.com/cutting-mat/axios/blob/main/README_CN.md)）
 - :white_check_mark: 更简单的状态管理（Power By [@cutting-mat/vue-store](https://github.com/cutting-mat/vue-store/blob/main/README_CN.md)）
