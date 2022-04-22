@@ -2,7 +2,7 @@
 
 ## Why
 
-在相当多面向定制的前端团队中，基于 Vue-Cli模板+Element 开始一个项目仍然是惯常做法，随着项目迭代以及开发人员增加，很快就会出现一些普遍性问题，比如：
+在相当多面向定制的前端团队中，基于 Vue-Cli 模板+Element 开始一个项目仍然是惯常做法，随着项目迭代以及开发人员增加，很快就会出现一些普遍性问题，比如：
 
 - 文件目录庞大，找代码费劲
 - 引用关系混乱，不知道一段代码被多少地方引用
@@ -30,22 +30,21 @@ CuttingMat 从以下几个方面着手，力求通过架构设计提高前端项
 
 ## What
 
-- :white_check_mark: 多环境自动适配
-- :white_check_mark: 支持同域子项目间共享登录凭据
-- :white_check_mark: 主路由多套模板（Layout）自由切换
-- :white_check_mark: 天然支持旁路（白名单）的路由结构
+- :white_check_mark: 开发、测试、生产，多环境自动适配
+- :white_check_mark: 支持同域子项目单点登录
+- :white_check_mark: 权限灵活、模板灵活的路由结构
 - :white_check_mark: 权限控制，基于角色实现路由、视图、请求任意颗粒度的权限控制（Power By [vue-access-control](https://github.com/tower1229/Vue-Access-Control/blob/master/README_CN.md)）
-- :white_check_mark: 用户认证，整合Token续期方案
-- :white_check_mark: 完整的异步请求管理方案
+- :white_check_mark: 用户认证，整合 Token 续期方案
+- :white_check_mark: 完整的异步请求管理方案，支持请求加密
 - :white_check_mark: 丝滑的请求缓存设计（Power By [@cutting-mat/axios](https://github.com/cutting-mat/axios/blob/main/README_CN.md)）
 - :white_check_mark: 更简单的状态管理（Power By [@cutting-mat/vue-store](https://github.com/cutting-mat/vue-store/blob/main/README_CN.md)）
 - :white_check_mark: 更强大的上传组件（Power By [@cutting-mat/uploader](https://github.com/cutting-mat/uploader)）
 - :white_check_mark: 核心功能模块化设计，一键开启/关闭
 - :white_check_mark: 常用组件封装
 - :white_check_mark: 常用 JS 方法封装
-- :white_check_mark: CSS-Reset、IconFont字体图标、常用 CSS 模块
+- :white_check_mark: CSS-Reset、IconFont 字体图标、常用 CSS 模块
 - :white_check_mark: Vue 全局资源统一注册
-- :white_check_mark: 兼容IE
+- :white_check_mark: 兼容 IE
 - :white_check_mark: Eslint 代码风格校验
 - :white_check_mark: SplitChunks 打包配置
 - :hourglass: 数据大屏场景解决方案（开发中）
