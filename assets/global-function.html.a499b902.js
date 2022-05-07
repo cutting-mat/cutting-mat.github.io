@@ -1,0 +1,1 @@
+const t={key:"v-501b4575",path:"/function/plugin/global-function.html",title:"Vue\u5168\u5C40\u529F\u80FD\u6CE8\u518C",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:165188988e4,contributors:[{name:"tower1229",email:"tower1229@foxmail.com",commits:1}]},filePathRelative:"function/plugin/global-function.md"};export{t as data};

@@ -1,0 +1,1 @@
+const t={key:"v-5344ecf5",path:"/function/plugin/dict-control.html",title:"\u6570\u636E\u5B57\u5178\u63A7\u4EF6",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:165188988e4,contributors:[{name:"tower1229",email:"tower1229@foxmail.com",commits:1}]},filePathRelative:"function/plugin/dict-control.md"};export{t as data};
