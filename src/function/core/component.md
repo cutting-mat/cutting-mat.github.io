@@ -1,6 +1,6 @@
 # 内置组件
 
-## CountdownButton
+## Countdown
 
 ## InputNumber
 

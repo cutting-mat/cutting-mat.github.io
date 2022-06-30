@@ -56,6 +56,11 @@ module.exports = {
         text: "生态",
         children: [
           {
+            text: "@cutting-mat/widgets",
+            link: "https://cutting-mat.github.io/cutting-mat-widgets",
+            target: "_blank",
+          },
+          {
             text: "@cutting-mat/axios",
             link: "http://cutting-mat.github.io/axios/",
             target: "_blank",
@@ -67,7 +72,7 @@ module.exports = {
           },
           {
             text: "@cutting-mat/uploader",
-            link: "http://cutting-mat.github.io/el-upload/",
+            link: "http://cutting-mat.github.io/uploader/",
             target: "_blank",
           },
           {
