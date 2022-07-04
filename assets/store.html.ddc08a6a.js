@@ -1,1 +1,0 @@
-const t={key:"v-5df1df94",path:"/function/plugin/store.html",title:"\u72B6\u6001\u7BA1\u7406\u63D2\u4EF6",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1656571118e3,contributors:[{name:"tower1229",email:"tower1229@foxmail.com",commits:1}]},filePathRelative:"function/plugin/store.md"};export{t as data};

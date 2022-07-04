@@ -23,7 +23,7 @@
 			}
     </script>
     <meta name="keywords" content="CuttingMat,Vue框架,Vue模板,前端模板,Vue项目模板"><meta name="msapplication-TileColor" content="#000000"><link rel="icon" href="/logo.png"><script src="/assets/js/baidu.js"></script><title>权限模块 | CuttingMat</title><meta name="description" content="面向大中型项目的开发脚手架，助你的Vue项目一臂之力">
-    <link rel="modulepreload" href="/assets/app.814a5dfe.js"><link rel="modulepreload" href="/assets/permission.html.f63590b6.js"><link rel="modulepreload" href="/assets/permission.html.47fc66d8.js">
+    <link rel="modulepreload" href="/assets/app.f1ad369a.js"><link rel="modulepreload" href="/assets/permission.html.9eb35559.js"><link rel="modulepreload" href="/assets/permission.html.e6f5fbd5.js">
     <link rel="stylesheet" href="/assets/style.ccca2552.css">
   </head>
   <body>
@@ -50,6 +50,6 @@ get <span class="token operator">/</span>member<span class="token operator">?</s
 
 get <span class="token operator">/</span>member<span class="token operator">/</span>s
 </code></pre><div class="line-numbers" aria-hidden="true"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="权限控制工具" tabindex="-1"><a class="header-anchor" href="#权限控制工具" aria-hidden="true">#</a> 权限控制工具</h2><ul><li><code>Vue.$_has</code>方法，用于脚本中判断当前用户是否具有某个资源权限，参数就是api请求方法，支持数组格式，数组用于多个权限联合判断</li><li><code>v-has</code>指令，用于模板中控制元素是否显示，基于<code>Vue.$_has</code>方法实现，参数同上</li></ul><h2 id="可能遇到的问题" tabindex="-1"><a class="header-anchor" href="#可能遇到的问题" aria-hidden="true">#</a> 可能遇到的问题</h2><ul><li>后端需要一个root用户不受权限限制，拥有平台所有资源，第一批资源创建、角色创建都要由这个root用户来完成</li><li>项目初始没有任何权限，开启权限控制后应该看不到任何页面，需要先关闭权限控制(<code>main.js里AccessControl:false</code>)，用root账号访问权限管理模块，创建第一批权限、角色、账号</li><li>拥有创建角色的账号可以创建新角色，但给新角色的赋权不能超过自身权限的范围，这是一个容易忽略的bug</li></ul><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">Last Updated: </span><!----></div><div class="meta-item contributors"><span class="meta-item-label">Contributors: </span><span class="meta-item-info"><!--[--><!--[--><span class="contributor" title="email: tower1229@foxmail.com">tower1229</span><!----><!--]--><!--]--></span></div></footer><nav class="page-nav"><p class="inner"><span class="prev"><a href="/function/plugin/global-function.html" class="" aria-label="Vue全局功能注册"><!--[--><!--]--> Vue全局功能注册 <!--[--><!--]--></a></span><span class="next"><a href="/function/plugin/store.html" class="" aria-label="状态管理插件"><!--[--><!--]--> 状态管理插件 <!--[--><!--]--></a></span></p></nav><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
-    <script type="module" src="/assets/app.814a5dfe.js" defer></script>
+    <script type="module" src="/assets/app.f1ad369a.js" defer></script>
   </body>
 </html>
