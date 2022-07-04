@@ -1,0 +1,1 @@
+const t={key:"v-3963db9a",path:"/function/plugin/upload.html",title:"\u4E0A\u4F20\u7EC4\u4EF6",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1656918539e3,contributors:[{name:"tower1229",email:"tower1229@foxmail.com",commits:1}]},filePathRelative:"function/plugin/upload.md"};export{t as data};
