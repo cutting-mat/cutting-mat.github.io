@@ -1,6 +1,6 @@
 {
   "name": "cutting-mat.github.io",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "cutting-mat官网",
   "main": "index.js",
   "scripts": {
@@ -10,14 +10,14 @@
   "author": "tower1229@foxmail.com",
   "license": "MIT",
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^2.0.0-beta.36",
-    "@vuepress/plugin-container": "^2.0.0-beta.36",
-    "@vuepress/plugin-search": "^2.0.0-beta.36",
-    "vuepress": "^2.0.0-beta.36"
+    "@vuepress/plugin-back-to-top": "^2.0.0-beta.48",
+    "@vuepress/plugin-container": "^2.0.0-beta.48",
+    "@vuepress/plugin-search": "^2.0.0-beta.48",
+    "vuepress": "^2.0.0-beta.48"
   },
   "dependencies": {
-    "element-plus": "^2.1.7",
-    "vue": "^3.2.31",
-    "vue-router": "^4.0.14"
+    "element-plus": "^2.2.8",
+    "vue": "^3.2.37",
+    "vue-router": "^4.0.16"
   }
 }

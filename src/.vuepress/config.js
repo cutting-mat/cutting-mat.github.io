@@ -1,3 +1,5 @@
+const { defaultTheme } = require("@vuepress/theme-default");
+
 module.exports = {
   title: "CuttingMat",
   description: "面向大中型项目的开发脚手架，助你的Vue项目一臂之力",
@@ -29,7 +31,7 @@ module.exports = {
       },
     ],
   ],
-  themeConfig: {
+  theme: defaultTheme({
     logo: "/logo.png",
     navbar: [
       {
@@ -138,7 +140,7 @@ module.exports = {
     },
     repo: "cutting-mat",
     editLink: false,
-  },
+  }),
   plugins: [
     "@vuepress/back-to-top",
     "@vuepress/active-header-links",

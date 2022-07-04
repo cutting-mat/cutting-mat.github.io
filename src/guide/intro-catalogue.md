@@ -1,10 +1,10 @@
 # 目录结构
 
-框架默认采用模块化目录结构，按业务拆分成若干独立模块，实现模块间开发解耦，非常适合多业务模块、多人协同开发的场景。
+框架`/src`目录除了框架文件外，所有业务功能均按业务模块拆分成独立文件夹，实现模块间开发解耦，非常适合多模块多人协同开发的场景。
 
 整体目录结构如下：
 
-``` js
+```js
 |--public/                      // 静态文件
 |--src/
 |   |--__template/                      // 模块模板文件
@@ -22,15 +22,13 @@
 |   |--pre-install.js                   // 预安装文件（框架）
 |   |--request.config.js                // 请求配置（框架）
 |   ·--route.config.js                  // 路由配置（框架）
-|--.browserslistrc              // 兼容性配置
 |--.eslintrc                    // 代码检查配置
-|--.gitignore                   // git 忽略配置
-|--babel.config.js              // babel 配置
-|--package.json                 // 项目描述
-·--vue.config.js                // Vue-CLI 配置
+|--.gitignore
+|--package.json
+·--vite.config.js                // 构建配置
 ```
 
-除了眼熟的Vue-CLI标准模板文件，标注（框架）的文件是脚手架自身的功能实现和必要的配置文件，忽略掉这些之后`src/`目录里只剩下一个主模块和两个业务模块：
+除了必要的构建相关文件，标注（框架）的文件是脚手架自身的功能实现和必要的配置文件，忽略掉这些之后`src/`目录里只剩下一个主模块和两个业务模块：
 
 ```js
 src/
@@ -41,17 +39,15 @@ src/
 
 ```
 
-这是框架的最主要特征：**以模块做为项目文件的基本组织单位**，根据业务模型，整个项目被拆分成物理意义上的若干模块文件夹。
-
 ## 模块化设计
 
-每个模块文件夹包含该模块业务开发需要的所有文件，包括：接口定义、静态文件（图片、样式、脚本）、组件、路由配置，除了核心功能和跨模块复用的功能外，一个模块完全可以自给自足。因此，开发者在开发过程中可以始终将关注点聚焦在当前模块内，从而将大型前端项目的代码管理压力降到最低。
+每个模块文件夹里包含该模块开发需要的所有文件，包括：接口定义、静态文件（图片、样式、脚本）、组件&页面、路由，除了框架全局功能和模块之间复用的功能外，一个模块完全可以自给自足。因此，开发者在开发过程中可以始终将关注点聚焦在当前模块内，从而降低大型前端项目的代码管理压力。
 
 模块的内部结构在技术上并没有限制，但为了统一风格便于协作，我们约定模块的目录结构如下：
 
-``` js
+```js
     |--api/                             // 请求接口
-    |   ·--user.js 
+    |   ·--user.js
     |--assets/                          // 依赖
     |   |--img/
     |   |--style.css
@@ -66,35 +62,41 @@ src/
 
 每个模块可以根据自己的业务范围输出一个路由数组，最终所有模块的路由都将在路由配置文件（`@/route.config.js`）中汇合。比如系统设置模块的路由可能是这样的：
 
-``` js
-export default [{
-    path: '/system',
-    name: '系统设置',
+```js
+export default [
+  {
+    path: "/system",
+    name: "系统设置",
     meta: {
-        icon: ''
+      icon: "",
     },
-    component: (resolve) => require(['./views/Index.vue'], resolve),
-    redirect: '/system/Profile',
-    children: [{
-        path: 'Profile',
-        name: '个人信息',
-        component: (resolve) => require(['./views/Profile.vue'], resolve)
-    }, {
-        path: 'Password',
-        name: '修改密码',
+    component: (resolve) => require(["./views/Index.vue"], resolve),
+    redirect: "/system/Profile",
+    children: [
+      {
+        path: "Profile",
+        name: "个人信息",
+        component: (resolve) => require(["./views/Profile.vue"], resolve),
+      },
+      {
+        path: "Password",
+        name: "修改密码",
         meta: {
-            hide: true
+          hide: true,
         },
-        component: (resolve) => require(['./views/Password.vue'], resolve)
-    }, {
-        path: 'Dict',
-        name: '字典管理',
+        component: (resolve) => require(["./views/Password.vue"], resolve),
+      },
+      {
+        path: "Dict",
+        name: "字典管理",
         meta: {
-            icon: ''
+          icon: "",
         },
-        component: (resolve) => require(['./views/Dict.vue'], resolve)
-    }]
-}]
+        component: (resolve) => require(["./views/Dict.vue"], resolve),
+      },
+    ],
+  },
+];
 ```
 
 以模块为单位的路由注册，天然实现了各业务模块的开发解耦，开发过程中各个模块通常只修改自己的文件，只要路由没有最终注册到项目中，就基本不会发生代码冲突。
@@ -109,7 +111,7 @@ export default [{
 
 ```js
 /#/MoudleName
-+------------------------+ 
++------------------------+
 | ./views/Index.vue      |
 | +--------------------+ |
 | | ./views/List.vue   | |
