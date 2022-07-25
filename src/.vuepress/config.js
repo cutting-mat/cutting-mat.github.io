@@ -43,12 +43,12 @@ module.exports = {
         link: "/guide/",
       },
       {
-        text: "配置",
-        link: "/config/",
-      },
-      {
         text: "功能",
         link: "/function/core/global-set/",
+      },
+      {
+        text: "配置",
+        link: "/config/",
       },
       {
         text: "演示",
@@ -102,6 +102,7 @@ module.exports = {
           children: [
             "/guide/", // 介绍
             "/guide/getting-started", // 快速开始
+            "/guide/work-flow", // 工作流
             "/guide/community", // 社区
           ],
         },
