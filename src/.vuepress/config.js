@@ -52,16 +52,22 @@ module.exports = {
       },
       {
         text: "演示",
-        link: "http://cutting-mat.github.io/template-element-ui/",
+        children: [
+          {
+            text: "cutting-mat-template",
+            link: "http://cutting-mat.github.io/template-element-ui/",
+            target: "_blank",
+          },
+          {
+            text: "cutting-mat-admin",
+            link: "http://cutting-mat.github.io/cutting-mat-admin/",
+            target: "_blank",
+          },
+        ],
       },
       {
         text: "生态",
         children: [
-          {
-            text: "cutting-mat-admin",
-            link: "https://cutting-mat.github.io/cutting-mat-admin/",
-            target: "_blank",
-          },
           {
             text: "@cutting-mat/widgets",
             link: "https://cutting-mat.github.io/cutting-mat-widgets",
