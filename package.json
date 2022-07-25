@@ -10,14 +10,15 @@
   "author": "tower1229@foxmail.com",
   "license": "MIT",
   "devDependencies": {
-    "@vuepress/plugin-back-to-top": "^2.0.0-beta.48",
-    "@vuepress/plugin-container": "^2.0.0-beta.48",
-    "@vuepress/plugin-search": "^2.0.0-beta.48",
-    "vuepress": "^2.0.0-beta.48"
+    "@vuepress/plugin-back-to-top": "^2.0.0-beta.49",
+    "@vuepress/plugin-container": "^2.0.0-beta.49",
+    "@vuepress/plugin-search": "^2.0.0-beta.49",
+    "@vuepress/client": "^2.0.0-beta.42",
+    "vuepress": "^2.0.0-beta.49"
   },
   "dependencies": {
-    "element-plus": "^2.2.8",
+    "element-plus": "^2.2.10",
     "vue": "^3.2.37",
-    "vue-router": "^4.0.16"
+    "vue-router": "^4.1.2"
   }
 }
