@@ -1,14 +1,14 @@
 # 快速开始
 
-## 使用npm初始化
+## 使用 npm 初始化
 
-``` bash
+```bash
 npm init @cutting-mat
 ```
 
-交互式CLI界面，支持三种模板选择：
+交互式 CLI 界面，支持三种模板选择：
 
-- `template-element-ui`：基于 Element-UI 的PC端项目模板
+- `template-element-ui`：基于 Element-UI 的 PC 端项目模板
 - `template-element-plus`：基于 Element-Plus 的移动端的项目模板（完善中...）
 - `template-vant`：基于 Vant4 的移动端的项目模板（完善中...）
 - `template-electron`：基于 Electron 的客户端项目模板（完善中...）
@@ -20,33 +20,32 @@ npm init @cutting-mat
 <CodeGroup>
     <CodeGroupItem title="Element-UI" active>
 
-``` bash
+```bash
 git clone https://github.com/cutting-mat/template-element-ui.git
 ```
 
   </CodeGroupItem>
   <CodeGroupItem title="Element-Plus">
 
-``` bash
+```bash
 git clone https://github.com/cutting-mat/template-element-plus.git
 ```
 
   </CodeGroupItem>
   <CodeGroupItem title="Vant">
 
-``` bash
+```bash
 git clone https://github.com/cutting-mat/template-vant.git
 ```
 
   </CodeGroupItem>
 </CodeGroup>
 
-
 ## 开发服务
 
-安装npm依赖，并运行开发服务。
+安装 npm 依赖，并运行开发服务。
 
-``` bash
+```bash
 npm i               // 安装依赖
 npm run serve       // 启动开发服务
 npm run build       // 构建生产环境代码
@@ -60,7 +59,7 @@ CuttingMat 使用 [iconfont](https://www.iconfont.cn/) 字体图标库。
 
 图标列表详见[字体图标](/function/core/iconfont.html)。
 
-## 三方UI库
+## 三方 UI 库
 
 [template-element-ui](https://github.com/cutting-mat/template-element-ui) 使用 Element-UI 组件库，[官方文档](https://element.eleme.cn/#/zh-CN/component/changelog)。
 
@@ -125,4 +124,10 @@ export const MainRoute = [Object.assign({}, main[0], {
 
 这样新模块就创建完成了，启动开发服务，新路由（ http://localhost:8080/#/myFirstMoudle ）已经可以访问。
 
-模块包含自己的 API、静态资源、组件、页面和路由，如果你熟悉Vue开发，接下来该如何继续就很简单了。
+模块包含自己的 API、静态资源、组件、页面和路由，如果你熟悉 Vue 开发，接下来该如何继续就很简单了。
+
+## 下一步
+
+了解框架设计思路可以参考[【指南】](/guide/intro-catalogue.html)部分。
+
+了解框架内置功能可以访问[【功能】](/function/core/global-set.html)查看内置功能。

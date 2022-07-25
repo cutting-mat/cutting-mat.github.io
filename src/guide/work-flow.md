@@ -33,12 +33,16 @@ Vue 语言特性插件：Vue Language Features (Volar)
 Git
 
 开发分支：dev
+
 测试分支：test
+
 生产分支：master
 
-> 代码永远只能从 dev `merge` 到 test，再从 test `merge` 到 master
-> 基础数据只能从 dev 环境导入 test 环境，经验证后再导入 master 分支
-> 多人协作可以设置一个版本管理员负责 dev 分支，其他开发者自建分支，例如：dev_zhangsan\dev_lisi
+> **代码合并**永远只能从 dev `merge` 到 test，再从 test `merge` 到 master
+
+> **多人协作**可以设置一个版本管理员负责 dev 分支，其他开发者自建分支，例如：dev_zhangsan\dev_lisi
+
+> **基础数据**只能从 dev 环境导入 test 环境，经验证后再导入 master 分支
 
 ## 持续集成
 

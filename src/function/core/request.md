@@ -4,7 +4,7 @@
 文档未完成
 :::
 
-`@/core/request.js`输出全局公用的axios实例，该实例封装了基础请求配置、 request 拦截器、response 拦截器、统一的错误处理、baseURL 设置等。
+`@/core/request.js`输出全局公用的 axios 实例，该实例封装了基础请求配置、 request 拦截器、response 拦截器、统一的错误处理、baseURL 设置等。
 
 ## 请求配置
 
@@ -36,12 +36,14 @@ export const baseURL = HASH[window.location.host] || ENVIRONMENT.dev;
 
 ## 参数处理
 
-统一预处理请求参数，将get和delete请求中的空字符参数，统一替换为`null`。
+统一预处理请求参数，将 get 和 delete 请求中的空字符参数，统一替换为`null`。
 
 ## 异常处理
 
-异常分为请求状态异常和业务状态异常，请求状态主要根据`HTTP Status Code`确定，状态码规则参考RESTFul；业务状态主要根据`response.data.code`确定，接口规则详见[接口响应规则约定]()。
+异常分为请求状态异常和业务状态异常，请求状态主要根据`HTTP Status Code`确定，状态码规则参考 RESTFul；业务状态主要根据`response.data.code`确定，接口规则详见[接口响应规则约定]()。
 
-## Token续期机制
+## Token 续期机制
 
 ## 数据缓存机制
+
+## 请求加密
